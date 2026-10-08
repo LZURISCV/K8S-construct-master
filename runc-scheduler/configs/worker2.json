@@ -1,0 +1,15 @@
+{
+  "id": "worker2",
+  "address": "192.168.10.12",
+  "controlURL": "http://192.168.10.10:8080",
+  "nodeTokenFile": "/etc/rcs/node.token",
+  "dataDir": "/var/lib/rcs-agent",
+  "runc": "/usr/bin/runc",
+  "runcRoot": "/run/rcs-runc",
+  "images": {"demo": "/opt/rcs/images/demo"},
+  "labels": {"zone": "zone2"},
+  "reserve": {"cpuMillis": 250, "memoryBytes": 536870912},
+  "heartbeatSeconds": 3,
+  "cgroupMode": "auto",
+  "systemdCgroup": false
+}

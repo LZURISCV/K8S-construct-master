@@ -1,0 +1,12 @@
+{
+  "name": "node-affinity",
+  "kind": "deployment",
+  "replicas": 1,
+  "template": {
+    "image": "demo",
+    "command": ["/usr/local/bin/rcs", "stress"],
+    "requests": {"cpuMillis": 100, "memoryBytes": 67108864},
+    "limits": {"cpuMillis": 300, "memoryBytes": 268435456},
+    "nodeAffinity": [{"matchExpressions": [{"key": "zone", "operator": "In", "values": ["zone1"]}]}]
+  }
+}

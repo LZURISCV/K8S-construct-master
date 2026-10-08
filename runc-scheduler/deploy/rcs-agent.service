@@ -1,0 +1,18 @@
+[Unit]
+Description=RCS runc deployment node agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/rcs agent -config /etc/rcs/agent.json
+Restart=on-failure
+RestartSec=5
+Delegate=yes
+KillMode=process
+TasksMax=infinity
+LimitNOFILE=65536
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

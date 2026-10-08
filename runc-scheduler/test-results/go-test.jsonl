@@ -1,0 +1,112 @@
+{"Time":"2026-10-08T10:53:38.504798+08:00","Action":"start","Package":"runcscheduler"}
+{"Time":"2026-10-08T10:53:39.5326988+08:00","Action":"run","Package":"runcscheduler","Test":"TestMonitorExitDoesNotReleaseStillRunningContainer"}
+{"Time":"2026-10-08T10:53:39.5326988+08:00","Action":"output","Package":"runcscheduler","Test":"TestMonitorExitDoesNotReleaseStillRunningContainer","Output":"=== RUN   TestMonitorExitDoesNotReleaseStillRunningContainer\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5491112+08:00","Action":"output","Package":"runcscheduler","Test":"TestMonitorExitDoesNotReleaseStillRunningContainer","Output":"--- PASS: TestMonitorExitDoesNotReleaseStillRunningContainer (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5496248+08:00","Action":"pass","Package":"runcscheduler","Test":"TestMonitorExitDoesNotReleaseStillRunningContainer","Elapsed":0.02}
+{"Time":"2026-10-08T10:53:39.5496248+08:00","Action":"run","Package":"runcscheduler","Test":"TestAgentStartsOnceReportsMetricsAndStopsOnRemoval"}
+{"Time":"2026-10-08T10:53:39.5496248+08:00","Action":"output","Package":"runcscheduler","Test":"TestAgentStartsOnceReportsMetricsAndStopsOnRemoval","Output":"=== RUN   TestAgentStartsOnceReportsMetricsAndStopsOnRemoval\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5567828+08:00","Action":"output","Package":"runcscheduler","Test":"TestAgentStartsOnceReportsMetricsAndStopsOnRemoval","Output":"--- PASS: TestAgentStartsOnceReportsMetricsAndStopsOnRemoval (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5567828+08:00","Action":"pass","Package":"runcscheduler","Test":"TestAgentStartsOnceReportsMetricsAndStopsOnRemoval","Elapsed":0.01}
+{"Time":"2026-10-08T10:53:39.5567828+08:00","Action":"run","Package":"runcscheduler","Test":"TestAgentCapturesJobExitAndLog"}
+{"Time":"2026-10-08T10:53:39.5567828+08:00","Action":"output","Package":"runcscheduler","Test":"TestAgentCapturesJobExitAndLog","Output":"=== RUN   TestAgentCapturesJobExitAndLog\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5693877+08:00","Action":"output","Package":"runcscheduler","Test":"TestAgentCapturesJobExitAndLog","Output":"--- PASS: TestAgentCapturesJobExitAndLog (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5693877+08:00","Action":"pass","Package":"runcscheduler","Test":"TestAgentCapturesJobExitAndLog","Elapsed":0.01}
+{"Time":"2026-10-08T10:53:39.5693877+08:00","Action":"run","Package":"runcscheduler","Test":"TestControllerAPIMultiNodeRoundTrip"}
+{"Time":"2026-10-08T10:53:39.5693877+08:00","Action":"output","Package":"runcscheduler","Test":"TestControllerAPIMultiNodeRoundTrip","Output":"=== RUN   TestControllerAPIMultiNodeRoundTrip\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5743357+08:00","Action":"output","Package":"runcscheduler","Test":"TestControllerAPIMultiNodeRoundTrip","Output":"--- PASS: TestControllerAPIMultiNodeRoundTrip (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5743357+08:00","Action":"pass","Package":"runcscheduler","Test":"TestControllerAPIMultiNodeRoundTrip","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5743357+08:00","Action":"run","Package":"runcscheduler","Test":"TestUnauthorizedAndMalformedAPI"}
+{"Time":"2026-10-08T10:53:39.5743357+08:00","Action":"output","Package":"runcscheduler","Test":"TestUnauthorizedAndMalformedAPI","Output":"=== RUN   TestUnauthorizedAndMalformedAPI\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestUnauthorizedAndMalformedAPI","Output":"--- PASS: TestUnauthorizedAndMalformedAPI (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"pass","Package":"runcscheduler","Test":"TestUnauthorizedAndMalformedAPI","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"run","Package":"runcscheduler","Test":"TestExecResultNodeOwnership"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestExecResultNodeOwnership","Output":"=== RUN   TestExecResultNodeOwnership\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestExecResultNodeOwnership","Output":"--- PASS: TestExecResultNodeOwnership (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"pass","Package":"runcscheduler","Test":"TestExecResultNodeOwnership","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"run","Package":"runcscheduler","Test":"TestCgroupV1CoMountedControllers"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupV1CoMountedControllers","Output":"=== RUN   TestCgroupV1CoMountedControllers\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupV1CoMountedControllers","Output":"--- PASS: TestCgroupV1CoMountedControllers (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"pass","Package":"runcscheduler","Test":"TestCgroupV1CoMountedControllers","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"run","Package":"runcscheduler","Test":"TestCgroupV1HybridUsesLegacyMounts"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupV1HybridUsesLegacyMounts","Output":"=== RUN   TestCgroupV1HybridUsesLegacyMounts\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupV1HybridUsesLegacyMounts","Output":"--- PASS: TestCgroupV1HybridUsesLegacyMounts (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"pass","Package":"runcscheduler","Test":"TestCgroupV1HybridUsesLegacyMounts","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"run","Package":"runcscheduler","Test":"TestCgroupDetectionRejectsIncompleteV1"}
+{"Time":"2026-10-08T10:53:39.5748679+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupDetectionRejectsIncompleteV1","Output":"=== RUN   TestCgroupDetectionRejectsIncompleteV1\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupDetectionRejectsIncompleteV1","Output":"--- PASS: TestCgroupDetectionRejectsIncompleteV1 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestCgroupDetectionRejectsIncompleteV1","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestCgroupV2DetectionAndRequiredControllers"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupV2DetectionAndRequiredControllers","Output":"=== RUN   TestCgroupV2DetectionAndRequiredControllers\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupV2DetectionAndRequiredControllers","Output":"--- PASS: TestCgroupV2DetectionAndRequiredControllers (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestCgroupV2DetectionAndRequiredControllers","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestCgroupModeMismatchAndInvalidMode"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupModeMismatchAndInvalidMode","Output":"=== RUN   TestCgroupModeMismatchAndInvalidMode\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupModeMismatchAndInvalidMode","Output":"--- PASS: TestCgroupModeMismatchAndInvalidMode (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestCgroupModeMismatchAndInvalidMode","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestCgroupRejectsReadOnlyAndUnavailableCounters"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupRejectsReadOnlyAndUnavailableCounters","Output":"=== RUN   TestCgroupRejectsReadOnlyAndUnavailableCounters\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestCgroupRejectsReadOnlyAndUnavailableCounters","Output":"--- PASS: TestCgroupRejectsReadOnlyAndUnavailableCounters (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestCgroupRejectsReadOnlyAndUnavailableCounters","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestV1ProcessPathMergedAndSystemd"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestV1ProcessPathMergedAndSystemd","Output":"=== RUN   TestV1ProcessPathMergedAndSystemd\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestV1ProcessPathMergedAndSystemd","Output":"--- PASS: TestV1ProcessPathMergedAndSystemd (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestV1ProcessPathMergedAndSystemd","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestV1ProcessPathMountRootAndEscapes"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestV1ProcessPathMountRootAndEscapes","Output":"=== RUN   TestV1ProcessPathMountRootAndEscapes\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestV1ProcessPathMountRootAndEscapes","Output":"--- PASS: TestV1ProcessPathMountRootAndEscapes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestV1ProcessPathMountRootAndEscapes","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestV1MetricsUnitsAndInvalidSamples"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestV1MetricsUnitsAndInvalidSamples","Output":"=== RUN   TestV1MetricsUnitsAndInvalidSamples\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestV1MetricsUnitsAndInvalidSamples","Output":"--- PASS: TestV1MetricsUnitsAndInvalidSamples (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestV1MetricsUnitsAndInvalidSamples","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestResourceReservationsAndBalance"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestResourceReservationsAndBalance","Output":"=== RUN   TestResourceReservationsAndBalance\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestResourceReservationsAndBalance","Output":"--- PASS: TestResourceReservationsAndBalance (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestResourceReservationsAndBalance","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestRequiredNodeAffinityAndMissingImage"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestRequiredNodeAffinityAndMissingImage","Output":"=== RUN   TestRequiredNodeAffinityAndMissingImage\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestRequiredNodeAffinityAndMissingImage","Output":"--- PASS: TestRequiredNodeAffinityAndMissingImage (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"pass","Package":"runcscheduler","Test":"TestRequiredNodeAffinityAndMissingImage","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"run","Package":"runcscheduler","Test":"TestPodAffinityAndAntiAffinityBothDirections"}
+{"Time":"2026-10-08T10:53:39.5753905+08:00","Action":"output","Package":"runcscheduler","Test":"TestPodAffinityAndAntiAffinityBothDirections","Output":"=== RUN   TestPodAffinityAndAntiAffinityBothDirections\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"output","Package":"runcscheduler","Test":"TestPodAffinityAndAntiAffinityBothDirections","Output":"--- PASS: TestPodAffinityAndAntiAffinityBothDirections (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"pass","Package":"runcscheduler","Test":"TestPodAffinityAndAntiAffinityBothDirections","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"run","Package":"runcscheduler","Test":"TestTaintsAndNoExecute"}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"output","Package":"runcscheduler","Test":"TestTaintsAndNoExecute","Output":"=== RUN   TestTaintsAndNoExecute\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"output","Package":"runcscheduler","Test":"TestTaintsAndNoExecute","Output":"--- PASS: TestTaintsAndNoExecute (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"pass","Package":"runcscheduler","Test":"TestTaintsAndNoExecute","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"run","Package":"runcscheduler","Test":"TestPreemptionWaitsForPhysicalRelease"}
+{"Time":"2026-10-08T10:53:39.5759248+08:00","Action":"output","Package":"runcscheduler","Test":"TestPreemptionWaitsForPhysicalRelease","Output":"=== RUN   TestPreemptionWaitsForPhysicalRelease\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"output","Package":"runcscheduler","Test":"TestPreemptionWaitsForPhysicalRelease","Output":"--- PASS: TestPreemptionWaitsForPhysicalRelease (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"pass","Package":"runcscheduler","Test":"TestPreemptionWaitsForPhysicalRelease","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"run","Package":"runcscheduler","Test":"TestOfflineNodeRetainsReservations"}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"output","Package":"runcscheduler","Test":"TestOfflineNodeRetainsReservations","Output":"=== RUN   TestOfflineNodeRetainsReservations\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"output","Package":"runcscheduler","Test":"TestOfflineNodeRetainsReservations","Output":"--- PASS: TestOfflineNodeRetainsReservations (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"pass","Package":"runcscheduler","Test":"TestOfflineNodeRetainsReservations","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"run","Package":"runcscheduler","Test":"TestAutoscaleAndStabilization"}
+{"Time":"2026-10-08T10:53:39.5764398+08:00","Action":"output","Package":"runcscheduler","Test":"TestAutoscaleAndStabilization","Output":"=== RUN   TestAutoscaleAndStabilization\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"output","Package":"runcscheduler","Test":"TestAutoscaleAndStabilization","Output":"--- PASS: TestAutoscaleAndStabilization (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"pass","Package":"runcscheduler","Test":"TestAutoscaleAndStabilization","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"run","Package":"runcscheduler","Test":"TestJobSuccessIsNotRestartedAndExitCodeValidated"}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"output","Package":"runcscheduler","Test":"TestJobSuccessIsNotRestartedAndExitCodeValidated","Output":"=== RUN   TestJobSuccessIsNotRestartedAndExitCodeValidated\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"output","Package":"runcscheduler","Test":"TestJobSuccessIsNotRestartedAndExitCodeValidated","Output":"--- PASS: TestJobSuccessIsNotRestartedAndExitCodeValidated (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"pass","Package":"runcscheduler","Test":"TestJobSuccessIsNotRestartedAndExitCodeValidated","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"run","Package":"runcscheduler","Test":"TestControllerPersistsAndRollsBackOnFailure"}
+{"Time":"2026-10-08T10:53:39.5774671+08:00","Action":"output","Package":"runcscheduler","Test":"TestControllerPersistsAndRollsBackOnFailure","Output":"=== RUN   TestControllerPersistsAndRollsBackOnFailure\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5867285+08:00","Action":"output","Package":"runcscheduler","Test":"TestControllerPersistsAndRollsBackOnFailure","Output":"--- PASS: TestControllerPersistsAndRollsBackOnFailure (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"pass","Package":"runcscheduler","Test":"TestControllerPersistsAndRollsBackOnFailure","Elapsed":0.01}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"run","Package":"runcscheduler","Test":"TestWorkloadUpdateAndDeletion"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"output","Package":"runcscheduler","Test":"TestWorkloadUpdateAndDeletion","Output":"=== RUN   TestWorkloadUpdateAndDeletion\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"output","Package":"runcscheduler","Test":"TestWorkloadUpdateAndDeletion","Output":"--- PASS: TestWorkloadUpdateAndDeletion (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"pass","Package":"runcscheduler","Test":"TestWorkloadUpdateAndDeletion","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"run","Package":"runcscheduler","Test":"TestOCIResourceLimitsAndNamespaces"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"output","Package":"runcscheduler","Test":"TestOCIResourceLimitsAndNamespaces","Output":"=== RUN   TestOCIResourceLimitsAndNamespaces\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"output","Package":"runcscheduler","Test":"TestOCIResourceLimitsAndNamespaces","Output":"--- PASS: TestOCIResourceLimitsAndNamespaces (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"pass","Package":"runcscheduler","Test":"TestOCIResourceLimitsAndNamespaces","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"run","Package":"runcscheduler","Test":"TestRuncStatsUnitsAndMissingFields"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"output","Package":"runcscheduler","Test":"TestRuncStatsUnitsAndMissingFields","Output":"=== RUN   TestRuncStatsUnitsAndMissingFields\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"output","Package":"runcscheduler","Test":"TestRuncStatsUnitsAndMissingFields","Output":"--- PASS: TestRuncStatsUnitsAndMissingFields (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"pass","Package":"runcscheduler","Test":"TestRuncStatsUnitsAndMissingFields","Elapsed":0}
+{"Time":"2026-10-08T10:53:39.587278+08:00","Action":"output","Package":"runcscheduler","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-10-08T10:53:39.5919212+08:00","Action":"output","Package":"runcscheduler","Output":"ok  \truncscheduler\t1.087s\n"}
+{"Time":"2026-10-08T10:53:39.5919212+08:00","Action":"pass","Package":"runcscheduler","Elapsed":1.087}

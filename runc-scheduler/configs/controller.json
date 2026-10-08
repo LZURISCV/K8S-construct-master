@@ -1,0 +1,7 @@
+{
+  "listen": "0.0.0.0:8080",
+  "stateFile": "/var/lib/rcs-control/state.json",
+  "adminTokenFile": "/etc/rcs/admin.token",
+  "nodeTokenFile": "/etc/rcs/node.token",
+  "nodeTimeoutSeconds": 120
+}

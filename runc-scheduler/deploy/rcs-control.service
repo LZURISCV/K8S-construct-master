@@ -1,0 +1,15 @@
+[Unit]
+Description=RCS custom runc scheduler control service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/rcs control -config /etc/rcs/controller.json
+Restart=on-failure
+RestartSec=5
+UMask=0077
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

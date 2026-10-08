@@ -1,0 +1,5 @@
+/bin/
+/data/
+/test-results/
+*.key
+*.token

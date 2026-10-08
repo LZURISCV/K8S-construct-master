@@ -1,0 +1,20 @@
+{
+  "name": "elastic",
+  "kind": "deployment",
+  "replicas": 1,
+  "template": {
+    "image": "demo",
+    "command": ["/usr/local/bin/rcs", "stress", "-idle-mib", "4", "-busy-mib", "160"],
+    "labels": {"app": "elastic"},
+    "requests": {"cpuMillis": 100, "memoryBytes": 67108864},
+    "limits": {"cpuMillis": 500, "memoryBytes": 268435456}
+  },
+  "autoscaler": {
+    "metric": "memory",
+    "targetPercent": 60,
+    "minReplicas": 1,
+    "maxReplicas": 5,
+    "scaleDownWindowSeconds": 30,
+    "cooldownSeconds": 5
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "tolerated",
+  "kind": "deployment",
+  "replicas": 1,
+  "template": {
+    "image": "demo",
+    "command": ["/usr/local/bin/rcs", "stress"],
+    "requests": {"cpuMillis": 100, "memoryBytes": 67108864},
+    "limits": {"cpuMillis": 300, "memoryBytes": 268435456},
+    "nodeSelector": {"rcs.node": "worker1"},
+    "tolerations": [{"key": "dedicated", "value": "test", "operator": "Equal", "effect": "NoSchedule"}]
+  }
+}

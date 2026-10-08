@@ -1,0 +1,13 @@
+{
+  "name": "spread",
+  "kind": "deployment",
+  "replicas": 2,
+  "template": {
+    "image": "demo",
+    "command": ["/usr/local/bin/rcs", "stress"],
+    "labels": {"app": "spread"},
+    "requests": {"cpuMillis": 100, "memoryBytes": 67108864},
+    "limits": {"cpuMillis": 300, "memoryBytes": 268435456},
+    "podAntiAffinity": [{"selector": {"app": "spread"}, "topologyKey": "rcs.node"}]
+  }
+}
