@@ -1,0 +1,11 @@
+prometheusImage: ""
+grafanaImage: ""
+adminSecret: rv-grafana-admin
+nodeTargets: []
+retention: 7d
+storage:
+  enabled: false
+  storageClass: ""
+  prometheusSize: 10Gi
+  grafanaSize: 2Gi
+

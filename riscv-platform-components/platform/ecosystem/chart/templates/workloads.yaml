@@ -1,0 +1,111 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rv-prometheus
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: rv-prometheus}
+  template:
+    metadata:
+      labels: {app: rv-prometheus}
+      annotations: {sidecar.istio.io/inject: "false"}
+    spec:
+      automountServiceAccountToken: false
+      securityContext: {runAsUser: 65534, runAsGroup: 65534, fsGroup: 65534}
+      containers:
+      - name: prometheus
+        image: {{ required "set prometheusImage to a validated linux/riscv64 image" .Values.prometheusImage | quote }}
+        args: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time={{ .Values.retention }}"]
+        ports: [{name: http, containerPort: 9090}]
+        readinessProbe: {httpGet: {path: /-/ready, port: http}}
+        resources:
+          requests: {cpu: "250m", memory: 256Mi}
+          limits: {cpu: "2", memory: 2Gi}
+        volumeMounts:
+        - {name: config, mountPath: /etc/prometheus}
+        - {name: data, mountPath: /prometheus}
+      volumes:
+      - name: config
+        configMap: {name: rv-prometheus-config}
+      - name: data
+{{ if .Values.storage.enabled }}
+        persistentVolumeClaim: {claimName: rv-prometheus-data}
+{{ else }}
+        emptyDir: {}
+{{ end }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rv-grafana
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: rv-grafana}
+  template:
+    metadata:
+      labels: {app: rv-grafana}
+      annotations: {sidecar.istio.io/inject: "false"}
+    spec:
+      automountServiceAccountToken: false
+      securityContext: {runAsUser: 472, runAsGroup: 472, fsGroup: 472}
+      containers:
+      - name: grafana
+        image: {{ required "set grafanaImage to a validated linux/riscv64 image" .Values.grafanaImage | quote }}
+        ports: [{name: http, containerPort: 3000}]
+        env:
+        - {name: GF_AUTH_ANONYMOUS_ENABLED, value: "false"}
+        - {name: GF_ANALYTICS_REPORTING_ENABLED, value: "false"}
+        - name: GF_SECURITY_ADMIN_PASSWORD
+          valueFrom: {secretKeyRef: {name: {{ .Values.adminSecret }}, key: password}}
+        readinessProbe: {httpGet: {path: /api/health, port: http}}
+        resources:
+          requests: {cpu: "250m", memory: 128Mi}
+          limits: {cpu: "2", memory: 1Gi}
+        volumeMounts:
+        - {name: data, mountPath: /var/lib/grafana}
+        - {name: config, mountPath: /etc/grafana/provisioning/datasources/rv.yaml, subPath: datasource.yaml}
+        - {name: config, mountPath: /etc/grafana/provisioning/dashboards/rv.yaml, subPath: provider.yaml}
+        - {name: config, mountPath: /var/lib/grafana/dashboards/rv.json, subPath: dashboard.json}
+      volumes:
+      - name: config
+        configMap: {name: rv-grafana-config}
+      - name: data
+{{ if .Values.storage.enabled }}
+        persistentVolumeClaim: {claimName: rv-grafana-data}
+{{ else }}
+        emptyDir: {}
+{{ end }}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: rv-prometheus}
+spec:
+  selector: {app: rv-prometheus}
+  ports: [{name: http, port: 9090, targetPort: http}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: rv-grafana}
+spec:
+  selector: {app: rv-grafana}
+  ports: [{name: http, port: 3000, targetPort: http}]
+{{ if .Values.storage.enabled }}
+{{ range $component, $size := dict "prometheus" .Values.storage.prometheusSize "grafana" .Values.storage.grafanaSize }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rv-{{ $component }}-data
+spec:
+  accessModes: [ReadWriteOnce]
+{{ if $.Values.storage.storageClass }}
+  storageClassName: {{ $.Values.storage.storageClass | quote }}
+{{ end }}
+  resources:
+    requests:
+      storage: {{ $size }}
+{{ end }}
+{{ end }}
+

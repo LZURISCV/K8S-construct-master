@@ -1,0 +1,25 @@
+apiVersion: platform.riscv.io/v1alpha1
+kind: ResourceClaim
+metadata:
+  name: compute-pool
+  namespace: default
+spec:
+  backend: kubernetes
+  image: REPLACE_WITH_RISCV64_PYTHON_IMAGE
+  command: ["python3", "-c", "import time; time.sleep(86400)"]
+  replicas: 2
+  requests: {cpu: "250m", memory: "64Mi"}
+  limits: {cpu: "500m", memory: "128Mi"}
+  nodeSelector: {platform.riscv.io/pool: general}
+---
+apiVersion: platform.riscv.io/v1alpha1
+kind: NodeProfile
+metadata:
+  name: worker1-profile
+  namespace: default
+spec:
+  node: REPLACE_WORKER1
+  labels: {platform.riscv.io/pool: general}
+  taints: []
+  schedulable: true
+

@@ -1,0 +1,52 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: nodemigrations.migration.riscv.io
+spec:
+  group: migration.riscv.io
+  scope: Namespaced
+  names:
+    plural: nodemigrations
+    singular: nodemigration
+    kind: NodeMigration
+    shortNames: [nmg]
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+    subresources:
+      status: {}
+    additionalPrinterColumns:
+    - name: Source
+      type: string
+      jsonPath: .spec.sourcePod
+    - name: Target
+      type: string
+      jsonPath: .spec.targetNode
+    - name: Phase
+      type: string
+      jsonPath: .status.phase
+    - name: RestoredPod
+      type: string
+      jsonPath: .status.targetPod
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            required: [sourcePod, targetNode]
+            properties:
+              sourcePod:
+                type: string
+                minLength: 1
+                maxLength: 253
+                pattern: '^[a-z0-9]([-a-z0-9.]*[a-z0-9])?$'
+              targetNode:
+                type: string
+                minLength: 1
+                maxLength: 253
+                pattern: '^[a-z0-9]([-a-z0-9.]*[a-z0-9])?$'
+          status:
+            type: object
+            x-kubernetes-preserve-unknown-fields: true

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rv-network
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+---
+apiVersion: platform.riscv.io/v1alpha1
+kind: HostNetworkWorkload
+metadata:
+  name: tcp-server
+  namespace: rv-network
+spec:
+  node: REPLACE_WORKER1
+  image: REPLACE_WITH_RISCV64_TOOLS_IMAGE
+  command: ["iperf3", "-s", "-p", "25201"]
+  ports:
+    - name: tcp-test
+      containerPort: 25201
+  requests: {cpu: "500m", memory: "64Mi"}
+  limits: {cpu: "1", memory: "128Mi"}

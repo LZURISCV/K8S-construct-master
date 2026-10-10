@@ -1,0 +1,22 @@
+{
+  "kubeconfig": "/etc/rv-platform/migration.kubeconfig",
+  "nodeHelper": "/usr/local/libexec/rv-migrate-runtime",
+  "allowedArchitectures": ["riscv64"],
+  "operationTimeoutSeconds": 1200,
+  "restoreTimeoutSeconds": 600,
+  "pollSeconds": 3,
+  "nodes": {
+    "k8snode1": {
+      "host": "192.168.50.71",
+      "user": "root",
+      "port": 22,
+      "identityFile": "/etc/rv-platform/migration_ed25519"
+    },
+    "k8snode2": {
+      "host": "192.168.50.72",
+      "user": "root",
+      "port": 22,
+      "identityFile": "/etc/rv-platform/migration_ed25519"
+    }
+  }
+}

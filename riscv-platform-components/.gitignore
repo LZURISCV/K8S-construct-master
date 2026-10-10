@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+platform/migration/containerd-bin/
+migration-test-results/
+platform-test-results/
+platform/communication/bin/
+*.source-commit

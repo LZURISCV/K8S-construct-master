@@ -1,0 +1,13 @@
+{
+  "resourceName": "hardware.riscv.io/accelerator",
+  "devices": [
+    {
+      "id": "accelerator-0",
+      "hostPath": "/dev/REPLACE_REAL_DEVICE",
+      "containerPath": "/dev/REPLACE_REAL_DEVICE",
+      "permissions": "rw",
+      "numa": 0
+    }
+  ]
+}
+

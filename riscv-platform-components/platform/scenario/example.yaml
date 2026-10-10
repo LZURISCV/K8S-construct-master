@@ -1,0 +1,20 @@
+apiVersion: platform.riscv.io/v1alpha1
+kind: ScenarioPolicy
+metadata:
+  name: web-scene
+  namespace: default
+spec:
+  query: 'max(rv_node_cpu_utilization_ratio)'
+  low: 0.30
+  high: 0.80
+  consecutiveSamples: 3
+  cooldownSeconds: 90
+  maxMetricAgeSeconds: 45
+  minReplicas: 1
+  maxReplicas: 8
+  highAction: {type: scale, deployment: web, delta: 1}
+  lowAction: {type: scale, deployment: web, delta: -1}
+# deployment web metadata.annotations:
+#   platform.riscv.io/allow-scaling: web-scene
+# Do not attach an HPA or a ResourcePolicy to the same Deployment.
+

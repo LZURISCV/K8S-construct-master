@@ -1,0 +1,14 @@
+{
+  "namespace": "rv-monitoring",
+  "prometheusImage": "registry.example/rv/prometheus:YOUR_VERSION",
+  "grafanaImage": "registry.example/rv/grafana:YOUR_VERSION",
+  "nodeTargets": [
+    "192.168.50.71:9108",
+    "192.168.50.72:9108"
+  ],
+  "istioSource": "/opt/src/istio",
+  "istioHub": "registry.example/rv-istio",
+  "istioTag": "YOUR_MATCHING_VERSION",
+  "enableIstio": true
+}
+
