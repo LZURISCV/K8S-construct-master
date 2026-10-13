@@ -1,0 +1,9 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "NodeProfile"
+metadata:
+  name: "@@PROFILE_NAME@@"
+  namespace: "@@PROFILE_NS@@"
+spec:
+  node: "@@TEST_NODE@@"
+  labels:
+    platform.riscv.io/accept-@@NONCE@@: "second"

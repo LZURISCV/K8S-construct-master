@@ -1,0 +1,29 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "HostNetworkWorkload"
+metadata:
+  name: "echo"
+  namespace: "@@NS@@"
+spec:
+  node: "@@TEST_NODE@@"
+  image: "@@TEST_IMAGE@@"
+  command:
+    - "python3"
+    - "-u"
+    - "-c"
+    - "#!/usr/bin/env python3\n\"\"\"TCP data-plane measurements with exact echo/hash checks and explicit deadlines.\"\"\"\nimport argparse\nimport hashlib\nimport json\nimport math\nimport os\nimport socket\nimport struct\nimport time\nfrom pathlib import Path\n\ndef receive(sock,n):\n    data=bytearray()\n    while len(data)<n:\n        chunk=sock.recv(n-len(data))\n        if not chunk: raise ConnectionError(\"truncated echo\")\n        data.extend(chunk)\n    return data\n\ndef percentile(values,p):\n    ordered=sorted(values); return ordered[min(len(ordered)-1,max(0,math.ceil(len(ordered)*p)-1))]\n\ndef server(host,port):\n    import threading\n    def handle(connection):\n        with connection:\n            while True:\n                try:\n                    size=struct.unpack(\"!Q\",receive(connection,8))[0]\n                    if not 1<=size<=64*1024*1024: return\n                    connection.sendall(receive(connection,size))\n                except (ConnectionError,OSError): return\n    with socket.socket() as sock:\n        sock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1);sock.bind((host,port));sock.listen(128)\n        while True:\n            conn,_=sock.accept();threading.Thread(target=handle,args=(conn,),daemon=True).start()\n\ndef client(host,port,count,size,deadline_ms,output,fifo=None):\n    if count<1 or not 1<=size<=64*1024*1024: raise ValueError(\"invalid sample count/size\")\n    if fifo is not None:\n        os.sched_setscheduler(0,os.SCHED_FIFO,os.sched_param(fifo))\n    payload=bytes((i%251 for i in range(size))); digest=hashlib.sha256(payload).hexdigest()\n    samples=[]; started=time.perf_counter()\n    with socket.create_connection((host,port),timeout=10) as sock:\n        sock.setsockopt(socket.IPPROTO_TCP,socket.TCP_NODELAY,1)\n        # Warmup excluded.\n        sock.sendall(struct.pack(\"!Q\",size)+payload); assert receive(sock,size)==payload\n        for index in range(count):\n            begin=time.perf_counter_ns();sock.sendall(struct.pack(\"!Q\",size)+payload);data=receive(sock,size)\n            elapsed=(time.perf_counter_ns()-begin)/1e6\n            if hashlib.sha256(data).hexdigest()!=digest: raise AssertionError(\"data mismatch\")\n            samples.append(elapsed)\n    elapsed=time.perf_counter()-started\n    result={\"operation\":\"tcp-echo\",\"host\":host,\"port\":port,\"count\":count,\"bytes\":size,\"p50_ms\":percentile(samples,.5),\n            \"p99_ms\":percentile(samples,.99),\"max_ms\":max(samples),\"deadline_ms\":deadline_ms,\n            \"deadline_misses\":sum(x>deadline_ms for x in samples) if deadline_ms else None,\n            \"roundtrip_payload_mbps\":count*size*8/elapsed/1e6,\"elapsed_seconds\":elapsed,\n            \"fifoPriority\":fifo,\"correct\":True,\"samples_ms\":samples,\"evidence\":\"real-TCP\",\"hardRealtimeGuarantee\":False}\n    Path(output).write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k!=\"samples_ms\"}))\n    return 1 if deadline_ms and result[\"deadline_misses\"] else 0\n\ndef main():\n    p=argparse.ArgumentParser()\n    p.add_argument(\"mode\",choices=[\"server\",\"client\"]);p.add_argument(\"--host\",default=\"0.0.0.0\");p.add_argument(\"--port\",type=int,default=19090)\n    p.add_argument(\"--count\",type=int,default=1000);p.add_argument(\"--bytes\",type=int,default=4096)\n    p.add_argument(\"--deadline-ms\",type=float);p.add_argument(\"--fifo-priority\",type=int);p.add_argument(\"--output\",default=\"latency.json\")\n    a=p.parse_args()\n    if a.mode==\"server\": server(a.host,a.port)\n    else: raise SystemExit(client(a.host,a.port,a.count,a.bytes,a.deadline_ms,a.output,a.fifo_priority))\nif __name__==\"__main__\": main()\n\n"
+    - "server"
+    - "--host"
+    - "0.0.0.0"
+    - "--port"
+    - "@@LATENCY_PORT@@"
+  requests:
+    cpu: "10m"
+    memory: "16Mi"
+  limits:
+    cpu: "1"
+    memory: "128Mi"
+  ports:
+    -
+      name: "tcp"
+      containerPort: "@@LATENCY_PORT@@"
+      protocol: "TCP"

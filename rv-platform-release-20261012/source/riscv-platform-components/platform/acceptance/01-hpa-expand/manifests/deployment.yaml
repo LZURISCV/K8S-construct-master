@@ -1,0 +1,35 @@
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "load"
+  namespace: "@@NS@@"
+  annotations: {}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "load"
+  template:
+    metadata:
+      labels:
+        app: "load"
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+      automountServiceAccountToken: false
+      containers:
+        -
+          name: "workload"
+          image: "@@TEST_IMAGE@@"
+          imagePullPolicy: "Never"
+          command:
+            - "python3"
+            - "-c"
+            - "import os,time,threading\nmemory=None\ndef load():\n global memory\n while True:\n  if os.path.exists('/tmp/enable_pressure'):\n   if memory is None: memory=bytearray(160*1024*1024)\n   for i in range(0,len(memory),4096): memory[i]=(memory[i]+1)%255\n  else: memory=None\n  time.sleep(.2)\nthreading.Thread(target=load,daemon=True).start()\nwhile True: time.sleep(1)\n"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "1"
+              memory: "256Mi"

@@ -1,0 +1,22 @@
+{
+  "kubeconfig": "/etc/rv-platform/platform.kubeconfig",
+  "prometheusURL": "http://127.0.0.1:9090",
+  "pollSeconds": 10,
+  "modules": [
+    "resource",
+    "network-host",
+    "scenario"
+  ],
+  "nodes": {
+    "worker1": {
+      "host": "192.168.50.71",
+      "user": "root",
+      "identityFile": "/root/.ssh/rv-platform"
+    },
+    "worker2": {
+      "host": "192.168.50.72",
+      "user": "root",
+      "identityFile": "/root/.ssh/rv-platform"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "ScenarioPolicy"
+metadata:
+  name: "feedback"
+  namespace: "@@NS@@"
+spec:
+  query: "vector(0.9)"
+  low: 0.3
+  high: 0.8
+  consecutiveSamples: 2
+  cooldownSeconds: 60
+  highAction:
+    type: "migrate"
+    sourcePod: "memory-counter"
+    targetNode: "@@TARGET_NODE@@"

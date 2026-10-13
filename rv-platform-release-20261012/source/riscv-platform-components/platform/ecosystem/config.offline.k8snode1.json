@@ -1,0 +1,11 @@
+{
+  "namespace": "rv-monitoring",
+  "prometheusImage": "localhost/rv-prometheus:3.13.4",
+  "nodeTargets": ["192.168.102.125:9108"],
+  "nodeSelector": {"kubernetes.io/hostname": "k8snode1"},
+  "service": {
+    "type": "NodePort",
+    "prometheusNodePort": 30090
+  },
+  "storage": {"enabled": false}
+}

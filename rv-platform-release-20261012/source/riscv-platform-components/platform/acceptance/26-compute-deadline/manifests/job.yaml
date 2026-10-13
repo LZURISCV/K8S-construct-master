@@ -1,0 +1,39 @@
+apiVersion: "batch/v1"
+kind: "Job"
+metadata:
+  name: "compute"
+  namespace: "@@NS@@"
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+      restartPolicy: "Never"
+      automountServiceAccountToken: false
+      volumes:
+        -
+          name: "source"
+          configMap:
+            name: "compute-source"
+      containers:
+        -
+          name: "compute"
+          image: "@@TEST_IMAGE@@"
+          imagePullPolicy: "Never"
+          command:
+            - "/bin/sh"
+            - "-ec"
+            - "gcc -O2 /source/realtime.c -o /tmp/rv-realtime -lm; exec /tmp/rv-realtime 1000 10000 10000 32 -1 -1"
+          volumeMounts:
+            -
+              name: "source"
+              mountPath: "/source"
+              readOnly: true
+          resources:
+            requests:
+              cpu: "1"
+              memory: "32Mi"
+            limits:
+              cpu: "1"
+              memory: "128Mi"

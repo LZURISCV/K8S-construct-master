@@ -1,0 +1,139 @@
+apiVersion: "kubeflow.org/v2beta1"
+kind: "MPIJob"
+metadata:
+  name: "mpi-reduce-native"
+  namespace: "@@NS@@"
+spec:
+  slotsPerWorker: 2
+  launcherCreationPolicy: "WaitForWorkersReady"
+  runPolicy:
+    cleanPodPolicy: "None"
+    backoffLimit: 0
+  mpiReplicaSpecs:
+    Launcher:
+      replicas: 1
+      restartPolicy: "Never"
+      template:
+        spec:
+          containers:
+            -
+              name: "mpi"
+              image: "@@TEST_IMAGE@@"
+              command:
+                - "/bin/sh"
+                - "-ec"
+                - "export OMPI_MCA_plm_rsh_args=\"$RV_MPI_SSH_ARGS\"; export PRTE_MCA_plm_ssh_args=\"$RV_MPI_SSH_ARGS\"; exec \"$@\""
+                - "rv-mpi-launcher"
+                - "python3"
+                - "/opt/rv-communication/launch.py"
+                - "--allow-run-as-root"
+                - "--bind-to"
+                - "none"
+                - "--hostfile"
+                - "/etc/mpi/hostfile"
+                - "-np"
+                - "@@MPI_RANKS@@"
+                - "rv-bench"
+                - "reduce"
+                - "native"
+                - "4096"
+                - "7"
+                - "256"
+                - "32"
+                - "0"
+              env:
+                -
+                  name: "RV_MPI_SSH_ARGS"
+                  value: "-p 25222 -o ConnectionAttempts=10 -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/rv-mpi-known-hosts"
+                -
+                  name: "OMPI_MCA_plm_rsh_agent"
+                  value: "ssh"
+                -
+                  name: "OMPI_MCA_plm_rsh_args"
+                  value: "-p 25222 -o ConnectionAttempts=10 -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/rv-mpi-known-hosts"
+                -
+                  name: "PRTE_MCA_plm_ssh_agent"
+                  value: "ssh"
+                -
+                  name: "PRTE_MCA_plm_ssh_args"
+                  value: "-p 25222 -o ConnectionAttempts=10 -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/rv-mpi-known-hosts"
+              resources:
+                requests:
+                  cpu: "100m"
+                  memory: "64Mi"
+                limits:
+                  cpu: "1"
+                  memory: "256Mi"
+              imagePullPolicy: "Never"
+          nodeSelector:
+            kubernetes.io/arch: "riscv64"
+    Worker:
+      replicas: "@@MPI_WORKERS@@"
+      restartPolicy: "Never"
+      template:
+        metadata:
+          labels:
+            platform.riscv.io/mpi-job: "mpi-reduce-native"
+            platform.riscv.io/mpi-role: "worker"
+        spec:
+          containers:
+            -
+              name: "mpi"
+              image: "@@TEST_IMAGE@@"
+              command:
+                - "/bin/sh"
+                - "-ec"
+                - "exec /usr/sbin/sshd -D -e -p \"$RV_MPI_SSH_PORT\" -o \"SetEnv=RV_WORKER_POD=$RV_WORKER_POD\""
+              env:
+                -
+                  name: "RV_MPI_SSH_PORT"
+                  value: "25222"
+                -
+                  name: "RV_WORKER_POD"
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: "metadata.name"
+                -
+                  name: "RV_MPI_SSH_ARGS"
+                  value: "-p 25222 -o ConnectionAttempts=10 -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/rv-mpi-known-hosts"
+                -
+                  name: "OMPI_MCA_plm_rsh_agent"
+                  value: "ssh"
+                -
+                  name: "OMPI_MCA_plm_rsh_args"
+                  value: "-p 25222 -o ConnectionAttempts=10 -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/rv-mpi-known-hosts"
+                -
+                  name: "PRTE_MCA_plm_ssh_agent"
+                  value: "ssh"
+                -
+                  name: "PRTE_MCA_plm_ssh_args"
+                  value: "-p 25222 -o ConnectionAttempts=10 -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/tmp/rv-mpi-known-hosts"
+              ports:
+                -
+                  name: "mpi-ssh"
+                  containerPort: 25222
+                  protocol: "TCP"
+              readinessProbe:
+                tcpSocket:
+                  port: 25222
+                initialDelaySeconds: 1
+                periodSeconds: 2
+              resources:
+                requests:
+                  cpu: "500m"
+                  memory: "256Mi"
+                limits:
+                  cpu: "2"
+                  memory: "1Gi"
+              imagePullPolicy: "Never"
+          affinity:
+            podAntiAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+                -
+                  labelSelector:
+                    matchLabels:
+                      platform.riscv.io/mpi-job: "mpi-reduce-native"
+                      platform.riscv.io/mpi-role: "worker"
+                  topologyKey: "kubernetes.io/hostname"
+          nodeSelector:
+            kubernetes.io/arch: "riscv64"

@@ -1,0 +1,21 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "ScenarioPolicy"
+metadata:
+  name: "feedback"
+  namespace: "@@NS@@"
+spec:
+  query: "vector(0.1)"
+  minReplicas: 1
+  maxReplicas: 3
+  cooldownSeconds: 0
+  low: 0.3
+  high: 0.8
+  consecutiveSamples: 2
+  highAction:
+    type: "scale"
+    deployment: "scene-app"
+    replicas: 3
+  lowAction:
+    type: "scale"
+    deployment: "scene-app"
+    replicas: 1

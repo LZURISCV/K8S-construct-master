@@ -1,0 +1,61 @@
+{
+  "packages": 42,
+  "rpmSHA256CheckedAgainstRepository": true,
+  "allRPMIdentitiesChecked": true,
+  "allELFMachinesRISCV": true,
+  "criuRequiredGLIBCMaximum": "2.38",
+  "criuDirectLibraries": {
+    "libbsd.so.0": {
+      "package": "libbsd",
+      "requiredVersions": [
+        "LIBBSD_0.5",
+        "LIBBSD_0.6"
+      ]
+    },
+    "libselinux.so.1": {
+      "package": "libselinux",
+      "requiredVersions": [
+        "LIBSELINUX_1.0"
+      ]
+    },
+    "libgnutls.so.30": {
+      "package": "gnutls",
+      "requiredVersions": [
+        "GNUTLS_3_4"
+      ]
+    },
+    "libnftables.so.1": {
+      "package": "nftables",
+      "requiredVersions": [
+        "LIBNFTABLES_1"
+      ]
+    },
+    "libprotobuf-c.so.1": {
+      "package": "protobuf-c",
+      "requiredVersions": [
+        "LIBPROTOBUF_C_1.0.0"
+      ]
+    },
+    "libnl-3.so.200": {
+      "package": "libnl3",
+      "requiredVersions": [
+        "libnl_3",
+        "libnl_3_2_27"
+      ]
+    },
+    "libnet.so.9": {
+      "package": "libnet",
+      "requiredVersions": []
+    },
+    "libuuid.so.1": {
+      "package": "libuuid",
+      "requiredVersions": [
+        "UUID_1.0"
+      ]
+    }
+  },
+  "checkedCRIUExternalNonGLIBCSymbols": 64,
+  "targetCPUExecution": "not performed",
+  "targetKernelCheck": "not performed",
+  "note": "The CRIU executable has no .riscv.attributes section; CPU instruction-set compatibility requires target execution."
+}

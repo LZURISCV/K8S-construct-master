@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-12",
+  "upstream": "https://github.com/containerd/containerd",
+  "tag": "v2.1.5",
+  "commit": "fcd43222d6b07379a4be9786bda52438f0dd16a1",
+  "source_sum": "h1:pWSmPxUszaLZKQPvOx27iD4iH+aM6o0BoN9+hg77cro=",
+  "original_restore_file_sha256": "3b0e3f0580eccca7f9f3082b1e82bcf7389950caeeafb3374cbe8c2ab1e04792",
+  "patched_version": "v2.1.5-rv1",
+  "patch": "CRI checkpoint restore: use exact complete local base image before Pull; see patch_containerd.py",
+  "patched_sources": {
+    "patch_containerd.py": "7822807c7a2bf8e58051b40d9b45f8ee9f1b353e3fa41fbe34fe8b78c725380d",
+    "rv_restore_image_cache.go": "91f834cbf076921c522f86a06821f4c3730ebe2c7b63e16df67f03b900434fe3",
+    "rv_restore_image_cache_test.go": "dc0aa7a9594881e900ff6c6b5ab674b90a6d4df674de6a137f0ce5d9f09f93d8"
+  },
+  "target": {
+    "GOOS": "linux",
+    "GOARCH": "riscv64",
+    "CGO_ENABLED": "0",
+    "GORISCV64": "rva20u64"
+  },
+  "helper": {
+    "bytes": 15728640,
+    "sha256": "179a48a74f4412268e787c054f97033c113680f125fd23c211fb042f7f4df407",
+    "ELF": "ELF64 little endian, EM_RISCV=243, no PT_INTERP/PT_DYNAMIC",
+    "compiler": "go1.21.13"
+  },
+  "containerd": {
+    "bytes": 37355672,
+    "sha256": "3958a4f7ccae237da44443b7debe67f4ad698183c1758dfb19fb971488c886c0",
+    "ELF": "ELF64 little endian, EM_RISCV=243, no PT_INTERP/PT_DYNAMIC",
+    "compiler": "go1.23.12"
+  },
+  "toolchains": {
+    "source": "https://go.dev/dl/?mode=json&include=all",
+    "go1.21.13.windows-amd64.zip": "924655193634bfcdf7ec7a34589e0d73458741998a59e4155a929ce85f81af2d",
+    "go1.23.12.windows-amd64.zip": "07c35866cdd864b81bb6f1cfbf25ac7f87ddc3a976ede1bf5112acbb12dfe6dc"
+  },
+  "server_compiler_requirement": "None for supplied binaries. Project helper remains compatible with Go 1.21; daemon rebuild uses a separate Go >=1.23 build host.",
+  "build_flags": [
+    "-mod=readonly",
+    "-trimpath",
+    "-ldflags=-s -w -X github.com/containerd/containerd/v2/version.Version=v2.1.5-rv1 -X github.com/containerd/containerd/v2/version.Revision=fcd43222d6b07379a4be9786bda52438f0dd16a1+rv-local-cache"
+  ],
+  "tests": {
+    "python_controller": 16,
+    "go121_helper": 8,
+    "go123_cache_policy": 3,
+    "native_checkpoint_restore": "Not yet run on target cluster"
+  },
+  "shim_ctr": "Reuse verified stock v2.1.5 files from /opt/rv-platform/containerd/2.1.5/bin; original directory is retained."
+}

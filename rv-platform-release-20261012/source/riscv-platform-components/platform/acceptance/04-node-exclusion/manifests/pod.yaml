@@ -1,0 +1,37 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "excluded"
+  namespace: "@@NS@@"
+  labels: {}
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "sleep"
+        - "86400"
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "1"
+          memory: "128Mi"
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          -
+            matchExpressions:
+              -
+                key: "platform.riscv.io/accept-@@NONCE@@"
+                operator: "In"
+                values:
+                  - "missing"

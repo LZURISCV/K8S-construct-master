@@ -1,0 +1,89 @@
+{
+  "name": "prometheus",
+  "repository": "prom/prometheus-linux-riscv64",
+  "digest": "sha256:4daee9c67062e192121e468cd9bf9c00bc9f25a7a29070e4ab26c8881a885a62",
+  "tag": "localhost/rv-prometheus:3.13.4",
+  "file": "rv-prometheus-3.13.4-riscv64.tar",
+  "source": "docker.io/prom/prometheus-linux-riscv64@sha256:4daee9c67062e192121e468cd9bf9c00bc9f25a7a29070e4ab26c8881a885a62",
+  "architecture": "riscv64",
+  "os": "linux",
+  "sourceManifest": {
+    "schemaVersion": 2,
+    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+    "config": {
+      "mediaType": "application/vnd.docker.container.image.v1+json",
+      "size": 5274,
+      "digest": "sha256:5b7da3a171406a1bce96eb1611f64eaff9a174dd2fcd904977629786b19416d5"
+    },
+    "layers": [
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 953063,
+        "digest": "sha256:917b7719750babc1121bdaccbdd7deb301b95809bd639d0da9dc82b4da817aae"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 324628,
+        "digest": "sha256:1a97453a02cc1156688f7c61cda6865761b29b6a52e0d946d55db39a0a08ca23"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 55433072,
+        "digest": "sha256:8f0d7d4b82ddb0662f7563ce952f2bb001d6a065a07e36614b44199bdf8f544c"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 45529693,
+        "digest": "sha256:053f768fb9ddb7ca62139980015ab1c5467a127872590479453793a5b83ed14e"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 637,
+        "digest": "sha256:8308306b734eecd20e64bb4f32da9f35b0de0dd70a08a469a88831017410cd11"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 4023,
+        "digest": "sha256:dc50b98393d8eaa92df1db692f253a8f79d5098bb11963b3da0ebd7f8e6ad38c"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 1596,
+        "digest": "sha256:dbdc1554a63a8ce52dc2c299d01481d6bf2a862fdfce53273987ec36442e244e"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 100,
+        "digest": "sha256:e3c878db121fc6f6c23e73928db09eed0aca19f588eadf5c920dc35fda6ca464"
+      },
+      {
+        "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+        "size": 695,
+        "digest": "sha256:1a81d8dc32b1c8f03348817a4fd2629f24a76045d9b2ec5979756ba83e7f9345"
+      }
+    ]
+  },
+  "configDigest": "sha256:5b7da3a171406a1bce96eb1611f64eaff9a174dd2fcd904977629786b19416d5",
+  "created": "2026-09-29T14:03:19.293975005Z",
+  "archiveSHA256": "abf331f2d31fb025e7029b753886d3a899a28b3c5423519f4b05a7622aa95093",
+  "archiveBytes": 102263808,
+  "verified": "source manifest digest, config digest, compressed layer digests, uncompressed diff_ids; archive retagged only; not executed on RISC-V",
+  "observedBinaries": [
+    {
+      "path": "bin/prometheus",
+      "mode": "0o755",
+      "regular": true,
+      "link": "",
+      "elfMachine": 243,
+      "elfBits": 64
+    },
+    {
+      "path": "bin/promtool",
+      "mode": "0o755",
+      "regular": true,
+      "link": "",
+      "elfMachine": 243,
+      "elfBits": 64
+    }
+  ]
+}

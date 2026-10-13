@@ -1,0 +1,42 @@
+{
+  "sha256": "b2e6b7892877f73db574d97cfeae6e705f3a4da2c8685e8f68e48b20aaeac78d",
+  "bytes": 468280899,
+  "partsVerified": 5,
+  "manifests": [
+    {
+      "digest": "sha256:8bdc6843680f510de914c73a5ade3ad97f2f13999036dd0c532bc0249c9141d9",
+      "annotations": {
+        "io.containerd.image.name": "localhost/rv-communication:0.2.0",
+        "org.opencontainers.image.ref.name": "0.2.0"
+      },
+      "configDigest": "sha256:f662eb868fb97d08721bb9e3e68bc86db19fe5867d38134d83bd4cd5fce3e31c",
+      "layers": 7
+    }
+  ],
+  "configs": [
+    {
+      "architecture": "riscv64",
+      "os": "linux",
+      "created": "2026-10-10T16:34:25.947110928Z",
+      "config": {
+        "User": "root",
+        "Env": [
+          "CONTROLLER_VERSION=",
+          "PATH=/usr/lib64/openmpi/bin:/usr/lib/openmpi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "OMPI_ALLOW_RUN_AS_ROOT=1",
+          "OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1"
+        ],
+        "Cmd": [
+          "/usr/sbin/sshd",
+          "-D",
+          "-e"
+        ],
+        "Labels": {
+          "io.buildah.version": "1.33.7"
+        }
+      }
+    }
+  ],
+  "source": "https://github.com/githuber196/Paper.git",
+  "serverImage": "localhost/rv-communication:0.2.0"
+}

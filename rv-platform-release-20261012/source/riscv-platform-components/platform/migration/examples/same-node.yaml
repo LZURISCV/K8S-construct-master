@@ -1,0 +1,9 @@
+apiVersion: migration.riscv.io/v1alpha1
+kind: NodeMigration
+metadata:
+  name: counter-local
+  namespace: migration-test
+spec:
+  mode: SameNode
+  sourcePod: memory-counter
+  targetNode: k8snode1

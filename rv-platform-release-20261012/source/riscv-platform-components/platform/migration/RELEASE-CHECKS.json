@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-12",
+  "pythonControllerTests": 16,
+  "go121HelperTests": 8,
+  "go123CachePolicyTests": 3,
+  "helperCrossCompile": "linux/riscv64 go1.21.13 CGO_ENABLED=0",
+  "containerdCrossCompile": "linux/riscv64 go1.23.12 CGO_ENABLED=0 GORISCV64=rva20u64",
+  "shellSyntaxFiles": 16,
+  "manualBashBlocks": 65,
+  "yaml": "crd.yaml and examples/same-node.yaml parsed with upstream gopkg.in/yaml.v3; enum and CrossNode default checked",
+  "pythonJSON": "migration Python AST and JSON parsed",
+  "binaryELF": "both EM_RISCV=243; no PT_INTERP/PT_DYNAMIC",
+  "supplementUpdater": "Verified on isolated source: apply, preserve original installer/stock daemon, reject corruption before writes",
+  "nativeRestore": "Not run; installation and functional tests remain separate server steps"
+}

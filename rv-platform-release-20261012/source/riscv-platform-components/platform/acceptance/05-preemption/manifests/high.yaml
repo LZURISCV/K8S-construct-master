@@ -1,0 +1,24 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "high"
+  namespace: "@@NS@@"
+  labels: {}
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "sleep"
+        - "86400"
+      resources:
+        requests:
+          cpu: "@@HIGH_CPU@@"
+          memory: "16Mi"
+  priorityClassName: "@@NS@@-high"

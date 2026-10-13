@@ -1,0 +1,11 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "NodeProfile"
+metadata:
+  name: "@@PROFILE_NAME@@"
+  namespace: "@@PROFILE_NS@@"
+  annotations:
+    platform.riscv.io/allow-scenario: "@@PROFILE_POLICY@@"
+spec:
+  node: "@@TEST_NODE@@"
+  labels:
+    platform.riscv.io/accept-@@NONCE@@: "first"

@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rv-platform
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rv-migration-controller
+  namespace: rv-platform
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rv-migration-controller
+rules:
+- apiGroups: [migration.riscv.io]
+  resources: [nodemigrations, nodemigrations/status, nodemigrations/finalizers]
+  verbs: [get, list, watch, update, patch]
+- apiGroups: ['']
+  resources: [pods]
+  verbs: [get, list, create, patch, delete]
+- apiGroups: ['']
+  resources: [pods/binding]
+  verbs: [create]
+- apiGroups: ['']
+  resources: [nodes]
+  verbs: [get, list]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: rv-migration-controller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: rv-migration-controller
+subjects:
+- kind: ServiceAccount
+  name: rv-migration-controller
+  namespace: rv-platform
+---
+# Explicit service-account token Secret for the host systemd controller.
+# Restrict this credential and the controller's SSH key to the control host.
+apiVersion: v1
+kind: Secret
+metadata:
+  name: rv-migration-controller-token
+  namespace: rv-platform
+  annotations:
+    kubernetes.io/service-account.name: rv-migration-controller
+type: kubernetes.io/service-account-token

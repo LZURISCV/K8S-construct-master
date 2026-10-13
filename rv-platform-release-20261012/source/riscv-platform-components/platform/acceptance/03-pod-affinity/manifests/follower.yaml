@@ -1,0 +1,33 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "follower"
+  namespace: "@@NS@@"
+  labels: {}
+spec:
+  nodeSelector: {}
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "sleep"
+        - "86400"
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "1"
+          memory: "128Mi"
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        -
+          labelSelector:
+            matchLabels:
+              app: "anchor"
+          topologyKey: "kubernetes.io/hostname"

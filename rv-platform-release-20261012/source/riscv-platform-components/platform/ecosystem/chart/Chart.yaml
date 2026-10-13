@@ -1,0 +1,7 @@
+apiVersion: v2
+name: rv-observability
+description: RISC-V platform Prometheus monitoring with command-line verification
+type: application
+version: 0.3.0
+appVersion: "0.3.0"
+

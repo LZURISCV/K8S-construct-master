@@ -1,0 +1,21 @@
+{
+  "upstream": "https://github.com/containerd/containerd",
+  "version": "2.0.13",
+  "release": "https://github.com/containerd/containerd/releases/tag/v2.0.13",
+  "archive": "containerd-static-2.0.13-linux-riscv64.tar.gz",
+  "archiveURL": "https://github.com/containerd/containerd/releases/download/v2.0.13/containerd-static-2.0.13-linux-riscv64.tar.gz",
+  "checksumURL": "https://github.com/containerd/containerd/releases/download/v2.0.13/containerd-static-2.0.13-linux-riscv64.tar.gz.sha256sum",
+  "sha256": "7767d4b8ecd96f11613679980fcbacb96eebb4f47028b73bae64ebdc74b85a4b",
+  "license": "Apache-2.0",
+  "licenseSource": "https://github.com/containerd/containerd/blob/v2.0.13/LICENSE",
+  "originalArchiveModified": false,
+  "ELFChecks": {
+    "members": ["bin/containerd", "bin/containerd-shim-runc-v2", "bin/containerd-stress", "bin/ctr"],
+    "allMachine": "EM_RISCV (243)",
+    "anyPT_INTERP": false,
+    "anyPT_DYNAMIC": false
+  },
+  "installedMembers": ["bin/containerd", "bin/containerd-shim-runc-v2", "bin/ctr"],
+  "upgradePath": ["1.6", "2.0.13", "2.1.5"],
+  "hardwareValidation": "Pending execution on target openEuler/RISC-V server. ELF/hash checks do not establish native execution or systemd/CRI upgrade success."
+}

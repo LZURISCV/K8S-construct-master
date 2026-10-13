@@ -1,0 +1,308 @@
+{
+  "release": "20261012",
+  "scope": "Kubernetes add-on source and selected offline dependencies; existing functional Kubernetes cluster is a prerequisite",
+  "manual": "RISC-V容器平台安装与功能测试手册.docx",
+  "acceptanceCases": 31,
+  "target": {
+    "os": "openEuler 24.03 LTS",
+    "architecture": "riscv64",
+    "cgroup": "v1",
+    "kubernetes": "v1.29.1",
+    "hostGo": "1.21",
+    "runtime": "containerd v2.1.5-rv1",
+    "runc": "1.1.8",
+    "criu": "4.1"
+  },
+  "assets": {
+    "offline/communication/IMAGE-AUDIT.json": {
+      "bytes": 1287,
+      "sha256": "8d4b23bd77158af29afd987fe822e2a8c64ac7e81645b07b81aad02b1c7ef9e9"
+    },
+    "offline/communication/rv-communication-0.2.0.tar.gz": {
+      "bytes": 468280899,
+      "sha256": "b2e6b7892877f73db574d97cfeae6e705f3a4da2c8685e8f68e48b20aaeac78d"
+    },
+    "offline/communication/SHA256SUMS": {
+      "bytes": 97,
+      "sha256": "47bdca16c0269737352948a39b1a7d6c71da0998d44f23669a4eaedd3a8b3450"
+    },
+    "offline/containerd-upgrade/check_config.py": {
+      "bytes": 4220,
+      "sha256": "010629a0e55baf952f69b1dac417953c9968a7b2263e77997284a8aad6628550"
+    },
+    "offline/containerd-upgrade/containerd-static-2.0.13-linux-riscv64.tar.gz": {
+      "bytes": 29916740,
+      "sha256": "7767d4b8ecd96f11613679980fcbacb96eebb4f47028b73bae64ebdc74b85a4b"
+    },
+    "offline/containerd-upgrade/containerd-static-2.0.13-linux-riscv64.tar.gz.sha256sum": {
+      "bytes": 112,
+      "sha256": "1996b95df19988c7d1f6c3fc2585b15a2ddb38c08f8926921dc48da364717951"
+    },
+    "offline/containerd-upgrade/LICENSE.containerd": {
+      "bytes": 10765,
+      "sha256": "4bbe3b885e8cd1907ab4cf9a41e862e74e24b5422297a4f2fe524e6a30ada2b4"
+    },
+    "offline/containerd-upgrade/prepare.sh": {
+      "bytes": 4966,
+      "sha256": "defaefeb1da933dee691a74c225801abe8153bf43edd2bb0602b99d7d0b80849"
+    },
+    "offline/containerd-upgrade/PROVENANCE.json": {
+      "bytes": 1231,
+      "sha256": "82637eeacaa550d526cd54b2a4446c85f8b62c3708ee3fd4c3de953a9d68e59a"
+    },
+    "offline/containerd-upgrade/README.md": {
+      "bytes": 9288,
+      "sha256": "9f2fa3422339ec884cff8b3ef191a4615a3b50993a5ce6234b0e92755fcd5c1e"
+    },
+    "offline/containerd-upgrade/SHA256SUMS": {
+      "bytes": 793,
+      "sha256": "7a09d4021750491eac3733ab9fcdfff11b0d399227368047bd9fa44e8b9fe1ac"
+    },
+    "offline/containerd-upgrade/switch.sh": {
+      "bytes": 4240,
+      "sha256": "54f8008f778a61dd429fc5a4e658cac021be6d981438079240b1f9bbc1d58561"
+    },
+    "offline/containerd-upgrade/test_config.py": {
+      "bytes": 6259,
+      "sha256": "59634b590c664df65446b8680b1ac8e3f68a3042c325ecf65208efc256ae0ed0"
+    },
+    "offline/criu/AUDIT.json": {
+      "bytes": 1473,
+      "sha256": "20dbe783a86613135de0be95f721bbf7b7d5308b9d57911c0c14d791873611cd"
+    },
+    "offline/criu/install.py": {
+      "bytes": 7065,
+      "sha256": "3fb2eb91316f87f11d7143f1ff05643c8c31d6013fa83185665c3bfaa904e10e"
+    },
+    "offline/criu/manifest.json": {
+      "bytes": 131851,
+      "sha256": "77d5e15cd157542350016667ddb63d3886184b3c2b0f2c77aa2982598151b679"
+    },
+    "offline/criu/PROVENANCE.json": {
+      "bytes": 26274,
+      "sha256": "812c0f59eb89f4687f4749512b0877ffd292ac377e606ca6efc6513032f473b6"
+    },
+    "offline/criu/README.md": {
+      "bytes": 4636,
+      "sha256": "caa0aadb26a5b49c60030bf68a1fd57b6264eab6b349319249b07ca42b9e5dcf"
+    },
+    "offline/criu/rpms/abseil-cpp-20230802.1-4.oe2403.riscv64.rpm": {
+      "bytes": 495109,
+      "sha256": "51d8a3e92eab15e0c1676aac9363d2239e4949e715e0539c60a55d5584958626"
+    },
+    "offline/criu/rpms/chkconfig-1.25-1.oe2403.riscv64.rpm": {
+      "bytes": 172941,
+      "sha256": "971c1df183740adc9b08247466d2ecb82284ee6d678bdfbba983a790bab7d1f2"
+    },
+    "offline/criu/rpms/criu-4.1-1.oe2509.riscv64.rpm": {
+      "bytes": 545423,
+      "sha256": "b82a4924c7984e7881f3b77b0979df02c26ac64fa0ff1d617b58993fbcd251d5"
+    },
+    "offline/criu/rpms/emacs-filesystem-29.1-3.oe2403.noarch.rpm": {
+      "bytes": 7957,
+      "sha256": "7da569be8234d0935b160b9ae4d40d2daf8ff2593d94f834073212559af91a1b"
+    },
+    "offline/criu/rpms/gmp-6.3.0-3.oe2403.riscv64.rpm": {
+      "bytes": 271497,
+      "sha256": "be1bebd2cadda4ae5699677c9ea56888a7766b8933492540dc27e7c35fab7e15"
+    },
+    "offline/criu/rpms/gnutls-3.8.2-4.oe2403.riscv64.rpm": {
+      "bytes": 941057,
+      "sha256": "8a06dbd83e456bb909887b9d3c9bb25a9a750a5071d9df888389738a4b46b503"
+    },
+    "offline/criu/rpms/iptables-libs-1.8.9-9.oe2403.riscv64.rpm": {
+      "bytes": 241501,
+      "sha256": "cc403f079abd262688c6e28010475682747655295592e3e35a03755373852022"
+    },
+    "offline/criu/rpms/jansson-2.14-4.oe2403.riscv64.rpm": {
+      "bytes": 32445,
+      "sha256": "9fc42772a763e1798bc0b190b4208ff61ae9db69953b9bf4f9154394f9e04e5c"
+    },
+    "offline/criu/rpms/libbsd-0.10.0-2.oe2403.riscv64.rpm": {
+      "bytes": 106505,
+      "sha256": "0cae4c33ceb83029aee07ba0c2ad81c1c54693e4ebba7bff73054b2ecb48e467"
+    },
+    "offline/criu/rpms/libedit-3.1-31.oe2403.riscv64.rpm": {
+      "bytes": 88433,
+      "sha256": "1978ee226883886459d9daac379cd8886794f9c43428f5649759fb61c32e8424"
+    },
+    "offline/criu/rpms/libffi-3.4.4-3.oe2403.riscv64.rpm": {
+      "bytes": 26197,
+      "sha256": "6687c87ed1c449be94473cae96c121e8a2df21f393f00f3b80e251073504c1a8"
+    },
+    "offline/criu/rpms/libgcc-12.3.1-31.oe2403.riscv64.rpm": {
+      "bytes": 76833,
+      "sha256": "c5644b88e8d588222088ebea2c486d0a7091eb46b2baec8a2043033aebf748ce"
+    },
+    "offline/criu/rpms/libidn2-2.3.4-1.oe2403.riscv64.rpm": {
+      "bytes": 139017,
+      "sha256": "351afa2b4aca478585f959698178117265518a81d6cd25be7d13c7233de14c08"
+    },
+    "offline/criu/rpms/libmnl-1.0.5-2.oe2403.riscv64.rpm": {
+      "bytes": 26097,
+      "sha256": "6640268e0726e3852a5ea5aa4c3cba0f1f7dff66b5bf9aa2636a5d64aff165e6"
+    },
+    "offline/criu/rpms/libnet-1.3-1.oe2403.riscv64.rpm": {
+      "bytes": 47413,
+      "sha256": "22506b65e345ba72ec9a27f88102c4a51bb2e935ac251321479c5f5a982bbe94"
+    },
+    "offline/criu/rpms/libnetfilter_conntrack-1.0.9-4.oe2403.riscv64.rpm": {
+      "bytes": 53421,
+      "sha256": "3a2ea1293348e30e61a3ce215fb01ce33c03c4dbfce26598fb37cb098216d5e4"
+    },
+    "offline/criu/rpms/libnfnetlink-1.0.2-2.oe2403.riscv64.rpm": {
+      "bytes": 26629,
+      "sha256": "c106e43c15b44d8e32b6e4f2cc441e1a08074645315edcd53e704915e487daaa"
+    },
+    "offline/criu/rpms/libnftnl-1.2.6-2.oe2403.riscv64.rpm": {
+      "bytes": 77101,
+      "sha256": "264a0a0ba27ddf46eb7431b072fe79252ea30171f3b35ed9acf89dea23f13d1c"
+    },
+    "offline/criu/rpms/libnl3-3.7.0-4.oe2403.riscv64.rpm": {
+      "bytes": 399169,
+      "sha256": "57df85843a227a518346ae49fcd0c41fc73205bdab27155593bd39c10d63fc06"
+    },
+    "offline/criu/rpms/libpcap-1.10.4-2.oe2403.riscv64.rpm": {
+      "bytes": 115429,
+      "sha256": "d9e64f333e89b39cd653332fb1a2d269a8748dc9cc85212a36357117a07309a9"
+    },
+    "offline/criu/rpms/libpng-1.6.40-1.oe2403.riscv64.rpm": {
+      "bytes": 106937,
+      "sha256": "4f95ba31618ca41298ebdebac2f7dfa949fa8a5ba308cdd5dd8c3ba3c4db975f"
+    },
+    "offline/criu/rpms/libselinux-3.5-3.oe2403.riscv64.rpm": {
+      "bytes": 118949,
+      "sha256": "bed13ac05f5cae2af34b2f46353ade51a1f7ebf920abd7dd71284ea73a6376b9"
+    },
+    "offline/criu/rpms/libsepol-3.5-3.oe2403.riscv64.rpm": {
+      "bytes": 289773,
+      "sha256": "d12e24a7d480cd310f0c11b2d85c4cf4cf2d3e4b891940c7db89fd7d38d1a06c"
+    },
+    "offline/criu/rpms/libstdc++-12.3.1-31.oe2403.riscv64.rpm": {
+      "bytes": 702661,
+      "sha256": "cb302b851e0c7914b0c4522a402da6756e3868190c005529a92abfe390072530"
+    },
+    "offline/criu/rpms/libtasn1-4.19.0-1.oe2403.riscv64.rpm": {
+      "bytes": 82185,
+      "sha256": "92689ddd35cc1ffa418f93d322a5089fb96db7c61a6c48118b1a79b60ef8e4a3"
+    },
+    "offline/criu/rpms/libunistring-1.1-2.oe2403.riscv64.rpm": {
+      "bytes": 468957,
+      "sha256": "3f6eee9416365ea9bbc0ec14ea583f80c01d723b6773955cafd4554671732073"
+    },
+    "offline/criu/rpms/libuuid-2.39.1-16.oe2403.riscv64.rpm": {
+      "bytes": 30105,
+      "sha256": "485f160677dce4dbf9a7377411b97714df3f67abc83ec3bc917f42114e2558c4"
+    },
+    "offline/criu/rpms/ncurses-base-6.4-8.oe2403.noarch.rpm": {
+      "bytes": 56569,
+      "sha256": "59c3946916612b6f59b19dbac079fee76750c2665deb2047dbba6953796bee54"
+    },
+    "offline/criu/rpms/ncurses-libs-6.4-8.oe2403.riscv64.rpm": {
+      "bytes": 281733,
+      "sha256": "e609e9f066a3df8222372f20b27c089b5213d656038719bff7eeeff1c3e6ca43"
+    },
+    "offline/criu/rpms/nettle-3.8.1-1.oe2403.riscv64.rpm": {
+      "bytes": 982101,
+      "sha256": "3a66f71e3f58df11b9a0348fa99d0e685ca5ce1dc7e9b70b7509efc9046aed32"
+    },
+    "offline/criu/rpms/newt-0.52.23-3.oe2403.riscv64.rpm": {
+      "bytes": 83525,
+      "sha256": "93bc2fca3e8cec36844c455911fbeaca5b8401c51dce76997fb874fc85bbba51"
+    },
+    "offline/criu/rpms/nftables-1.0.8-6.oe2403.riscv64.rpm": {
+      "bytes": 334661,
+      "sha256": "3341b42a5fe924e1ecfc5f14ed049a6b66c6c8d4680cbce2aca0df64ab448f61"
+    },
+    "offline/criu/rpms/p11-kit-0.25.0-2.oe2403.riscv64.rpm": {
+      "bytes": 287761,
+      "sha256": "d2feb095cfbb84bb79a19af9b6e1b2dd8825845e70df434c5a041024978ee4d9"
+    },
+    "offline/criu/rpms/p11-kit-trust-0.25.0-2.oe2403.riscv64.rpm": {
+      "bytes": 122405,
+      "sha256": "c85264c6ddccd74a1f0f611bedd819ace3d4ac8926627dde238578d7402bc20e"
+    },
+    "offline/criu/rpms/pcre2-10.42-7.oe2403.riscv64.rpm": {
+      "bytes": 572297,
+      "sha256": "6fd21e713ce9cfc540103c2b260fc693245958a317a2485597fcfd0ed586bb83"
+    },
+    "offline/criu/rpms/popt-1.19-2.oe2403.riscv64.rpm": {
+      "bytes": 54289,
+      "sha256": "498d26970f706e27aecfdc2bb10c9b6f6c49e08094e579e3ec11e8e1860f80c7"
+    },
+    "offline/criu/rpms/protobuf-25.1-3.oe2403.riscv64.rpm": {
+      "bytes": 1020553,
+      "sha256": "ee6ab845df72476574929032026ad3327360db9101274d06bc1742d10defc814"
+    },
+    "offline/criu/rpms/protobuf-c-1.4.1-1.oe2403.riscv64.rpm": {
+      "bytes": 125749,
+      "sha256": "e14c6ed8b11b76093e1972acc83a18bea725f60b1225a1ed7c6966e29466fd25"
+    },
+    "offline/criu/rpms/protobuf-compiler-25.1-3.oe2403.riscv64.rpm": {
+      "bytes": 1091881,
+      "sha256": "b05af389e77fdea41529ad93d2e3593499b8b9ca546fe32d64e6e64029f615c1"
+    },
+    "offline/criu/rpms/readline-8.2-2.oe2403.riscv64.rpm": {
+      "bytes": 149301,
+      "sha256": "13be9bc627504610990bda23e2eb257a2a41a3071bdb6dc650cba4ab45d8a980"
+    },
+    "offline/criu/rpms/slang-2.3.3-2.oe2403.riscv64.rpm": {
+      "bytes": 614361,
+      "sha256": "30ca11eef1c456b06f268b131c9c4997f30c24b7bd7f06c0de1f65aacaf0cd6c"
+    },
+    "offline/criu/rpms/zlib-1.2.13-4.oe2403.riscv64.rpm": {
+      "bytes": 88641,
+      "sha256": "32bd23b8d38465fe6c2a6ecb343974c2fadcedf3749d99a1a64ffc5a200bd46a"
+    },
+    "offline/criu/SHA256SUMS": {
+      "bytes": 4977,
+      "sha256": "4221f3d6088c5cd930b82cf1283ca2791fe97f0d08047baeb40cae4e3c242ddb"
+    },
+    "offline/criu/test_install.py": {
+      "bytes": 4713,
+      "sha256": "08cf64bc1889ec1655cdd6ce0dc015acf8ca1db231c017b0ebd7d6dd6a9c30f0"
+    },
+    "offline/monitoring/helm-v3.14.4-linux-riscv64.tar.gz": {
+      "bytes": 15319801,
+      "sha256": "925782b159392d52df5ebab88e04e695217325894c6a32a9a779e865b7e32411"
+    },
+    "offline/monitoring/prometheus.metadata.json": {
+      "bytes": 3367,
+      "sha256": "60b7f6f20261f868b6ad2d4176475b65ce5dc5defc195a0ebf63e100122334a8"
+    },
+    "offline/monitoring/rv-prometheus-3.13.4-riscv64.tar": {
+      "bytes": 102263808,
+      "sha256": "abf331f2d31fb025e7029b753886d3a899a28b3c5423519f4b05a7622aa95093"
+    }
+  },
+  "excluded": [
+    "LZ-001.conf and private credentials",
+    "Grafana",
+    "Istio",
+    "physical SR-IOV/RDMA direct assignment"
+  ],
+  "notBundled": [
+    "Kubernetes/etcd/kubelet OS installation RPMs",
+    "Flannel/CoreDNS/metrics-server/MPI Operator images",
+    "host OS and general-purpose system tools"
+  ],
+  "clusterValidation": "Only historical user supplied results documented; new 31-case suite has local structural verification, not a fresh cluster run",
+  "localVerification": {
+    "acceptanceCases": 31,
+    "manifestTemplates": 58,
+    "acceptanceBashSyntax": 63,
+    "manualBashBlocks": 217,
+    "supportRegressionTests": 8,
+    "manualPages": 64,
+    "manualVisualInspection": "all pages inspected; affected pages checked again after editorial corrections",
+    "clusterExecution": "not performed for new suite",
+    "riscvELFBinaries": [
+      "source/riscv-platform-components/platform/migration/bin/rv-migrate-runtime",
+      "source/riscv-platform-components/platform/migration/containerd-bin/containerd",
+      "source/riscv-platform-components/platform/migration/containerd-bin/containerd-shim-runc-v2",
+      "source/riscv-platform-components/platform/migration/containerd-bin/ctr",
+      "source/riscv-platform-components/platform/migration/offline-runtime/bin/containerd"
+    ],
+    "communicationImageVerified": true
+  }
+}

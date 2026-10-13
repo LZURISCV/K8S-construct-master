@@ -1,0 +1,24 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "HostNetworkWorkload"
+metadata:
+  name: "host-server"
+  namespace: "@@NS@@"
+spec:
+  node: "@@TARGET_NODE@@"
+  image: "@@TEST_IMAGE@@"
+  command:
+    - "iperf3"
+    - "-s"
+    - "-p"
+    - "@@CROSS_NET_PORT@@"
+  requests:
+    cpu: "10m"
+    memory: "16Mi"
+  limits:
+    cpu: "1"
+    memory: "128Mi"
+  ports:
+    -
+      name: "tcp"
+      containerPort: "@@CROSS_NET_PORT@@"
+      protocol: "TCP"

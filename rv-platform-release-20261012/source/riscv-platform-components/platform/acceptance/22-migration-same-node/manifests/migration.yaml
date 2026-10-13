@@ -1,0 +1,9 @@
+apiVersion: "migration.riscv.io/v1alpha1"
+kind: "NodeMigration"
+metadata:
+  name: "counter-move"
+  namespace: "@@NS@@"
+spec:
+  sourcePod: "memory-counter"
+  targetNode: "@@TEST_NODE@@"
+  mode: "SameNode"

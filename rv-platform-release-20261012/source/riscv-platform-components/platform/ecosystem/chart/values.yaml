@@ -1,0 +1,13 @@
+prometheusImage: ""
+imagePullPolicy: IfNotPresent
+nodeSelector: {}
+service:
+  type: ClusterIP
+  prometheusNodePort: 30090
+nodeTargets: []
+retention: 7d
+storage:
+  enabled: false
+  storageClass: ""
+  prometheusSize: 10Gi
+

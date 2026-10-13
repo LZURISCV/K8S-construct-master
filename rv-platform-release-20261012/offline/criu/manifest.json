@@ -1,0 +1,4706 @@
+{
+  "target": {
+    "os": "openEuler",
+    "version": "24.03",
+    "arch": "riscv64",
+    "glibc": "2.38"
+  },
+  "systemRequirements": [
+    "/bin/bash",
+    "/bin/sh",
+    "/sbin/ldconfig",
+    "/usr/bin/env",
+    "crypto-policies",
+    "glibc",
+    "ld-linux-riscv64-lp64d.so.1()(64bit)",
+    "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)",
+    "libc.so.6(GLIBC_2.27)(64bit)",
+    "libc.so.6(GLIBC_2.34)(64bit)",
+    "libc.so.6(GLIBC_2.38)(64bit)",
+    "libm.so.6()(64bit)",
+    "libm.so.6(GLIBC_2.27)(64bit)",
+    "rtld(GNU_HASH)"
+  ],
+  "packages": [
+    {
+      "name": "abseil-cpp",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "20230802.1",
+        "rel": "4.oe2403"
+      },
+      "sha256": "51d8a3e92eab15e0c1676aac9363d2239e4949e715e0539c60a55d5584958626",
+      "location": "riscv64/abseil-cpp-20230802.1-4.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "abseil-cpp",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "20230802.1",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "abseil-cpp(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "20230802.1",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libabsl_bad_any_cast_impl.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_bad_optional_access.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_bad_variant_access.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_base.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_city.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_civil_time.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cord.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cord_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_functions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_handle.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_info.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_sample_token.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc32c.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_cord_state.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_cpu_detect.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_debugging_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_demangle_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_die_if_null.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_examine_stack.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_exponential_biased.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_failure_signal_handler.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_commandlineflag.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_commandlineflag_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_config.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_marshalling.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_parse.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_private_handle_accessor.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_program_name.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_reflection.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_usage.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_usage_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_graphcycles_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_hash.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_hashtablez_sampler.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_int128.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_kernel_timeout_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_leak_check.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_entry.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_flags.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_globals.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_initialize.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_check_op.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_conditions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_format.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_globals.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_log_sink_set.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_message.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_nullguard.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_proto.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_severity.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_sink.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_low_level_hash.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_malloc_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_periodic_sampler.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_distributions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_distribution_test_util.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_platform.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_pool_urbg.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_randen.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_randen_hwaes.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_randen_hwaes_impl.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_randen_slow.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_internal_seed_material.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_seed_gen_exception.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_random_seed_sequences.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_hash_set.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_logging_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_scoped_set_env.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_spinlock_wait.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_stacktrace.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_status.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_statusor.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_str_format_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strerror.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_string_view.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strings.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strings_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_symbolize.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_synchronization.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_throw_delegate.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time_zone.so.2308.0.0()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.2.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.5.0)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libm.so.6(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.5)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.9)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.11)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.14)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.15)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.17)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.18)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.19)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.20)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.21)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.29)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.30)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.9)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-abseil-cpp-20230802.1-4.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-abseil-cpp-20230802.1-4.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/abseil-cpp-20230802.1-4.oe2403.riscv64.rpm",
+      "file": "abseil-cpp-20230802.1-4.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "chkconfig",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.25",
+        "rel": "1.oe2403"
+      },
+      "sha256": "971c1df183740adc9b08247466d2ecb82284ee6d678bdfbba983a790bab7d1f2",
+      "location": "riscv64/chkconfig-1.25-1.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "/sbin/chkconfig"
+        },
+        {
+          "name": "chkconfig",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.25",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "chkconfig(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.25",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "ntsysv",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.25",
+          "rel": "1.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52()(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52)(64bit)"
+        },
+        {
+          "name": "libpopt.so.0()(64bit)"
+        },
+        {
+          "name": "libpopt.so.0(LIBPOPT_0)(64bit)"
+        },
+        {
+          "name": "libselinux.so.1()(64bit)"
+        },
+        {
+          "name": "libselinux.so.1(LIBSELINUX_1.0)(64bit)"
+        },
+        {
+          "name": "libsepol.so.2()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/alternatives",
+        "/etc/chkconfig.d",
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-chkconfig-1.25-1.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-chkconfig-1.25-1.oe2403.riscv64",
+        "/etc/init.d",
+        "/etc/rc.d",
+        "/etc/rc.d/init.d",
+        "/etc/rc.d/rc0.d",
+        "/etc/rc.d/rc1.d",
+        "/etc/rc.d/rc2.d",
+        "/etc/rc.d/rc3.d",
+        "/etc/rc.d/rc4.d",
+        "/etc/rc.d/rc5.d",
+        "/etc/rc.d/rc6.d",
+        "/etc/rc0.d",
+        "/etc/rc1.d",
+        "/etc/rc2.d",
+        "/etc/rc3.d",
+        "/etc/rc4.d",
+        "/etc/rc5.d",
+        "/etc/rc6.d",
+        "/usr/sbin/alternatives",
+        "/usr/sbin/chkconfig",
+        "/usr/sbin/ntsysv",
+        "/usr/sbin/update-alternatives"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/chkconfig-1.25-1.oe2403.riscv64.rpm",
+      "file": "chkconfig-1.25-1.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "criu",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "4.1",
+        "rel": "1.oe2509"
+      },
+      "sha256": "b82a4924c7984e7881f3b77b0979df02c26ac64fa0ff1d617b58993fbcd251d5",
+      "location": "riscv64/criu-4.1-1.oe2509.riscv64.rpm",
+      "provides": [
+        {
+          "name": "criu",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "4.1",
+          "rel": "1.oe2509"
+        },
+        {
+          "name": "criu(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "4.1",
+          "rel": "1.oe2509"
+        },
+        {
+          "name": "criu-libs",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "4.1",
+          "rel": "1.oe2509"
+        },
+        {
+          "name": "crtools",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "4.1",
+          "rel": "1.oe2509"
+        },
+        {
+          "name": "libcriu.so.2()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/bin/bash"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0()(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.5)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.6)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30()(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_4)(64bit)"
+        },
+        {
+          "name": "libnet.so.9()(64bit)"
+        },
+        {
+          "name": "libnftables.so.1()(64bit)"
+        },
+        {
+          "name": "libnftables.so.1(LIBNFTABLES_1)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3_2_27)(64bit)"
+        },
+        {
+          "name": "libprotobuf-c.so.1()(64bit)"
+        },
+        {
+          "name": "libprotobuf-c.so.1(LIBPROTOBUF_C_1.0.0)(64bit)"
+        },
+        {
+          "name": "libselinux.so.1()(64bit)"
+        },
+        {
+          "name": "libselinux.so.1(LIBSELINUX_1.0)(64bit)"
+        },
+        {
+          "name": "libuuid.so.1()(64bit)"
+        },
+        {
+          "name": "libuuid.so.1(UUID_1.0)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-criu-4.1-1.oe2509.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-criu-4.1-1.oe2509.riscv64",
+        "/usr/sbin/criu"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/25.09/mainline/riscv64/criu-4.1-1.oe2509.riscv64.rpm",
+      "file": "criu-4.1-1.oe2509.riscv64.rpm",
+      "repositoryVersion": "25.09"
+    },
+    {
+      "name": "emacs-filesystem",
+      "arch": "noarch",
+      "version": {
+        "epoch": "1",
+        "ver": "29.1",
+        "rel": "3.oe2403"
+      },
+      "sha256": "7da569be8234d0935b160b9ae4d40d2daf8ff2593d94f834073212559af91a1b",
+      "location": "noarch/emacs-filesystem-29.1-3.oe2403.noarch.rpm",
+      "provides": [
+        {
+          "name": "emacs-filesystem",
+          "flags": "EQ",
+          "epoch": "1",
+          "ver": "29.1",
+          "rel": "3.oe2403"
+        }
+      ],
+      "requires": [],
+      "files": [],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/noarch/emacs-filesystem-29.1-3.oe2403.noarch.rpm",
+      "file": "emacs-filesystem-29.1-3.oe2403.noarch.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "gmp",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "1",
+        "ver": "6.3.0",
+        "rel": "3.oe2403"
+      },
+      "sha256": "be1bebd2cadda4ae5699677c9ea56888a7766b8933492540dc27e7c35fab7e15",
+      "location": "riscv64/gmp-6.3.0-3.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "gmp",
+          "flags": "EQ",
+          "epoch": "1",
+          "ver": "6.3.0",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "gmp(riscv-64)",
+          "flags": "EQ",
+          "epoch": "1",
+          "ver": "6.3.0",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libgmp.so.10()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-gmp-6.3.0-3.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-gmp-6.3.0-3.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/gmp-6.3.0-3.oe2403.riscv64.rpm",
+      "file": "gmp-6.3.0-3.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "gnutls",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "3.8.2",
+        "rel": "4.oe2403"
+      },
+      "sha256": "8a06dbd83e456bb909887b9d3c9bb25a9a750a5071d9df888389738a4b46b503",
+      "location": "riscv64/gnutls-3.8.2-4.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "bundled(gnulib)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "20130424"
+        },
+        {
+          "name": "gnutls",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.8.2",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "gnutls(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.8.2",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "gnutls-c++",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.8.2",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libgnutls.so.30()(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_4)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_0)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_10)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_12)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_13)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_14)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_2)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_3)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_4)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_5)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_6)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_8)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_6_9)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_7_0)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_7_2)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_7_3)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_7_4)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_7_5)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_7_7)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_8_1)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_3_8_2)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_FIPS140_3_4)(64bit)"
+        },
+        {
+          "name": "libgnutls.so.30(GNUTLS_PRIVATE_3_4)(64bit)"
+        },
+        {
+          "name": "libgnutlsxx.so.30()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "crypto-policies"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.0)(64bit)"
+        },
+        {
+          "name": "libgmp.so.10()(64bit)"
+        },
+        {
+          "name": "libhogweed.so.6()(64bit)"
+        },
+        {
+          "name": "libhogweed.so.6(HOGWEED_6)(64bit)"
+        },
+        {
+          "name": "libidn2.so.0()(64bit)"
+        },
+        {
+          "name": "libidn2.so.0(IDN2_0.0.0)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libnettle.so.8()(64bit)"
+        },
+        {
+          "name": "libnettle.so.8(NETTLE_8)(64bit)"
+        },
+        {
+          "name": "libp11-kit.so.0()(64bit)"
+        },
+        {
+          "name": "libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.9)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4)(64bit)"
+        },
+        {
+          "name": "libtasn1"
+        },
+        {
+          "name": "libtasn1.so.6()(64bit)"
+        },
+        {
+          "name": "libtasn1.so.6(LIBTASN1_0_3)(64bit)"
+        },
+        {
+          "name": "libunistring.so.5()(64bit)"
+        },
+        {
+          "name": "libz.so.1()(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.0)(64bit)"
+        },
+        {
+          "name": "nettle"
+        },
+        {
+          "name": "p11-kit-trust"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-gnutls-3.8.2-4.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-gnutls-3.8.2-4.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/gnutls-3.8.2-4.oe2403.riscv64.rpm",
+      "file": "gnutls-3.8.2-4.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "iptables-libs",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.8.9",
+        "rel": "9.oe2403"
+      },
+      "sha256": "cc403f079abd262688c6e28010475682747655295592e3e35a03755373852022",
+      "location": "riscv64/iptables-libs-1.8.9-9.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "iptables-libs",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.8.9",
+          "rel": "9.oe2403"
+        },
+        {
+          "name": "iptables-libs(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.8.9",
+          "rel": "9.oe2403"
+        },
+        {
+          "name": "libip4tc.so.2()(64bit)"
+        },
+        {
+          "name": "libip6t_DNPT.so()(64bit)"
+        },
+        {
+          "name": "libip6t_HL.so()(64bit)"
+        },
+        {
+          "name": "libip6t_NETMAP.so()(64bit)"
+        },
+        {
+          "name": "libip6t_REJECT.so()(64bit)"
+        },
+        {
+          "name": "libip6t_SNPT.so()(64bit)"
+        },
+        {
+          "name": "libip6t_ah.so()(64bit)"
+        },
+        {
+          "name": "libip6t_dst.so()(64bit)"
+        },
+        {
+          "name": "libip6t_eui64.so()(64bit)"
+        },
+        {
+          "name": "libip6t_frag.so()(64bit)"
+        },
+        {
+          "name": "libip6t_hbh.so()(64bit)"
+        },
+        {
+          "name": "libip6t_hl.so()(64bit)"
+        },
+        {
+          "name": "libip6t_icmp6.so()(64bit)"
+        },
+        {
+          "name": "libip6t_ipv6header.so()(64bit)"
+        },
+        {
+          "name": "libip6t_mh.so()(64bit)"
+        },
+        {
+          "name": "libip6t_rt.so()(64bit)"
+        },
+        {
+          "name": "libip6t_srh.so()(64bit)"
+        },
+        {
+          "name": "libip6tc.so.2()(64bit)"
+        },
+        {
+          "name": "libipt_CLUSTERIP.so()(64bit)"
+        },
+        {
+          "name": "libipt_ECN.so()(64bit)"
+        },
+        {
+          "name": "libipt_NETMAP.so()(64bit)"
+        },
+        {
+          "name": "libipt_REJECT.so()(64bit)"
+        },
+        {
+          "name": "libipt_TTL.so()(64bit)"
+        },
+        {
+          "name": "libipt_ULOG.so()(64bit)"
+        },
+        {
+          "name": "libipt_ah.so()(64bit)"
+        },
+        {
+          "name": "libipt_icmp.so()(64bit)"
+        },
+        {
+          "name": "libipt_realm.so()(64bit)"
+        },
+        {
+          "name": "libipt_ttl.so()(64bit)"
+        },
+        {
+          "name": "libxt_AUDIT.so()(64bit)"
+        },
+        {
+          "name": "libxt_CHECKSUM.so()(64bit)"
+        },
+        {
+          "name": "libxt_CLASSIFY.so()(64bit)"
+        },
+        {
+          "name": "libxt_CONNMARK.so()(64bit)"
+        },
+        {
+          "name": "libxt_CONNSECMARK.so()(64bit)"
+        },
+        {
+          "name": "libxt_CT.so()(64bit)"
+        },
+        {
+          "name": "libxt_DSCP.so()(64bit)"
+        },
+        {
+          "name": "libxt_HMARK.so()(64bit)"
+        },
+        {
+          "name": "libxt_IDLETIMER.so()(64bit)"
+        },
+        {
+          "name": "libxt_LED.so()(64bit)"
+        },
+        {
+          "name": "libxt_LOG.so()(64bit)"
+        },
+        {
+          "name": "libxt_MARK.so()(64bit)"
+        },
+        {
+          "name": "libxt_NAT.so()(64bit)"
+        },
+        {
+          "name": "libxt_NFLOG.so()(64bit)"
+        },
+        {
+          "name": "libxt_NFQUEUE.so()(64bit)"
+        },
+        {
+          "name": "libxt_RATEEST.so()(64bit)"
+        },
+        {
+          "name": "libxt_SECMARK.so()(64bit)"
+        },
+        {
+          "name": "libxt_SET.so()(64bit)"
+        },
+        {
+          "name": "libxt_SYNPROXY.so()(64bit)"
+        },
+        {
+          "name": "libxt_TCPMSS.so()(64bit)"
+        },
+        {
+          "name": "libxt_TCPOPTSTRIP.so()(64bit)"
+        },
+        {
+          "name": "libxt_TEE.so()(64bit)"
+        },
+        {
+          "name": "libxt_TOS.so()(64bit)"
+        },
+        {
+          "name": "libxt_TPROXY.so()(64bit)"
+        },
+        {
+          "name": "libxt_TRACE.so()(64bit)"
+        },
+        {
+          "name": "libxt_addrtype.so()(64bit)"
+        },
+        {
+          "name": "libxt_bpf.so()(64bit)"
+        },
+        {
+          "name": "libxt_cgroup.so()(64bit)"
+        },
+        {
+          "name": "libxt_cluster.so()(64bit)"
+        },
+        {
+          "name": "libxt_comment.so()(64bit)"
+        },
+        {
+          "name": "libxt_connbytes.so()(64bit)"
+        },
+        {
+          "name": "libxt_connlabel.so()(64bit)"
+        },
+        {
+          "name": "libxt_connlimit.so()(64bit)"
+        },
+        {
+          "name": "libxt_connmark.so()(64bit)"
+        },
+        {
+          "name": "libxt_conntrack.so()(64bit)"
+        },
+        {
+          "name": "libxt_cpu.so()(64bit)"
+        },
+        {
+          "name": "libxt_dccp.so()(64bit)"
+        },
+        {
+          "name": "libxt_devgroup.so()(64bit)"
+        },
+        {
+          "name": "libxt_dscp.so()(64bit)"
+        },
+        {
+          "name": "libxt_ecn.so()(64bit)"
+        },
+        {
+          "name": "libxt_esp.so()(64bit)"
+        },
+        {
+          "name": "libxt_hashlimit.so()(64bit)"
+        },
+        {
+          "name": "libxt_helper.so()(64bit)"
+        },
+        {
+          "name": "libxt_ipcomp.so()(64bit)"
+        },
+        {
+          "name": "libxt_iprange.so()(64bit)"
+        },
+        {
+          "name": "libxt_ipvs.so()(64bit)"
+        },
+        {
+          "name": "libxt_length.so()(64bit)"
+        },
+        {
+          "name": "libxt_limit.so()(64bit)"
+        },
+        {
+          "name": "libxt_mac.so()(64bit)"
+        },
+        {
+          "name": "libxt_mark.so()(64bit)"
+        },
+        {
+          "name": "libxt_multiport.so()(64bit)"
+        },
+        {
+          "name": "libxt_nfacct.so()(64bit)"
+        },
+        {
+          "name": "libxt_osf.so()(64bit)"
+        },
+        {
+          "name": "libxt_owner.so()(64bit)"
+        },
+        {
+          "name": "libxt_physdev.so()(64bit)"
+        },
+        {
+          "name": "libxt_pkttype.so()(64bit)"
+        },
+        {
+          "name": "libxt_policy.so()(64bit)"
+        },
+        {
+          "name": "libxt_quota.so()(64bit)"
+        },
+        {
+          "name": "libxt_rateest.so()(64bit)"
+        },
+        {
+          "name": "libxt_recent.so()(64bit)"
+        },
+        {
+          "name": "libxt_rpfilter.so()(64bit)"
+        },
+        {
+          "name": "libxt_sctp.so()(64bit)"
+        },
+        {
+          "name": "libxt_set.so()(64bit)"
+        },
+        {
+          "name": "libxt_socket.so()(64bit)"
+        },
+        {
+          "name": "libxt_standard.so()(64bit)"
+        },
+        {
+          "name": "libxt_statistic.so()(64bit)"
+        },
+        {
+          "name": "libxt_string.so()(64bit)"
+        },
+        {
+          "name": "libxt_tcp.so()(64bit)"
+        },
+        {
+          "name": "libxt_tcpmss.so()(64bit)"
+        },
+        {
+          "name": "libxt_time.so()(64bit)"
+        },
+        {
+          "name": "libxt_tos.so()(64bit)"
+        },
+        {
+          "name": "libxt_u32.so()(64bit)"
+        },
+        {
+          "name": "libxt_udp.so()(64bit)"
+        },
+        {
+          "name": "libxtables.so.12()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libm.so.6(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libnetfilter_conntrack.so.3()(64bit)"
+        },
+        {
+          "name": "libnfnetlink.so.0()(64bit)"
+        },
+        {
+          "name": "libpcap.so.1()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-iptables-libs-1.8.9-9.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-iptables-libs-1.8.9-9.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/iptables-libs-1.8.9-9.oe2403.riscv64.rpm",
+      "file": "iptables-libs-1.8.9-9.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "jansson",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "2.14",
+        "rel": "4.oe2403"
+      },
+      "sha256": "9fc42772a763e1798bc0b190b4208ff61ae9db69953b9bf4f9154394f9e04e5c",
+      "location": "riscv64/jansson-2.14-4.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "jansson",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.14",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "jansson(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.14",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libjansson.so.4()(64bit)"
+        },
+        {
+          "name": "libjansson.so.4(libjansson.so.4)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-jansson-2.14-4.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-jansson-2.14-4.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/jansson-2.14-4.oe2403.riscv64.rpm",
+      "file": "jansson-2.14-4.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libbsd",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "0.10.0",
+        "rel": "2.oe2403"
+      },
+      "sha256": "0cae4c33ceb83029aee07ba0c2ad81c1c54693e4ebba7bff73054b2ecb48e467",
+      "location": "riscv64/libbsd-0.10.0-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libbsd",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.10.0",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libbsd(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.10.0",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libbsd.so.0()(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.0)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.1)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.10.0)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.2)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.3)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.4)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.5)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.6)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.7)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.8)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.9)(64bit)"
+        },
+        {
+          "name": "libbsd.so.0(LIBBSD_0.9.1)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libbsd-0.10.0-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libbsd-0.10.0-2.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libbsd-0.10.0-2.oe2403.riscv64.rpm",
+      "file": "libbsd-0.10.0-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libedit",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "3.1",
+        "rel": "31.oe2403"
+      },
+      "sha256": "1978ee226883886459d9daac379cd8886794f9c43428f5649759fb61c32e8424",
+      "location": "riscv64/libedit-3.1-31.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libedit",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.1",
+          "rel": "31.oe2403"
+        },
+        {
+          "name": "libedit(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.1",
+          "rel": "31.oe2403"
+        },
+        {
+          "name": "libedit.so.0()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libtinfo.so.6()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libedit-3.1-31.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libedit-3.1-31.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libedit-3.1-31.oe2403.riscv64.rpm",
+      "file": "libedit-3.1-31.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libffi",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "3.4.4",
+        "rel": "3.oe2403"
+      },
+      "sha256": "6687c87ed1c449be94473cae96c121e8a2df21f393f00f3b80e251073504c1a8",
+      "location": "riscv64/libffi-3.4.4-3.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libffi",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.4.4",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libffi(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.4.4",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libffi.so.8()(64bit)"
+        },
+        {
+          "name": "libffi.so.8(LIBFFI_BASE_8.0)(64bit)"
+        },
+        {
+          "name": "libffi.so.8(LIBFFI_CLOSURE_8.0)(64bit)"
+        },
+        {
+          "name": "libffi.so.8(LIBFFI_GO_CLOSURE_8.0)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libffi-3.4.4-3.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libffi-3.4.4-3.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libffi-3.4.4-3.oe2403.riscv64.rpm",
+      "file": "libffi-3.4.4-3.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libgcc",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "12.3.1",
+        "rel": "31.oe2403"
+      },
+      "sha256": "c5644b88e8d588222088ebea2c486d0a7091eb46b2baec8a2043033aebf748ce",
+      "location": "riscv64/libgcc-12.3.1-31.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libgcc",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "12.3.1",
+          "rel": "31.oe2403"
+        },
+        {
+          "name": "libgcc(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "12.3.1",
+          "rel": "31.oe2403"
+        },
+        {
+          "name": "libgcc_s.so.1()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.3)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.3.1)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4.2)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4.4)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.0.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.2.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.4.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.5.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.7.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_7.0.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GLIBC_2.0)(64bit)"
+        }
+      ],
+      "requires": [],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libgcc-12.3.1-31.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libgcc-12.3.1-31.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libgcc-12.3.1-31.oe2403.riscv64.rpm",
+      "file": "libgcc-12.3.1-31.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libidn2",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "2.3.4",
+        "rel": "1.oe2403"
+      },
+      "sha256": "351afa2b4aca478585f959698178117265518a81d6cd25be7d13c7233de14c08",
+      "location": "riscv64/libidn2-2.3.4-1.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "bundled(gnulib)"
+        },
+        {
+          "name": "idn2"
+        },
+        {
+          "name": "libidn2",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.3.4",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libidn2(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.3.4",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libidn2.so.0()(64bit)"
+        },
+        {
+          "name": "libidn2.so.0(IDN2_0.0.0)(64bit)"
+        },
+        {
+          "name": "libidn2.so.0(IDN2_2.1.0)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/bin/sh",
+          "pre": "1"
+        },
+        {
+          "name": "/bin/sh"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libunistring.so.5()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.34)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libidn2-2.3.4-1.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libidn2-2.3.4-1.oe2403.riscv64",
+        "/usr/bin/idn2"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libidn2-2.3.4-1.oe2403.riscv64.rpm",
+      "file": "libidn2-2.3.4-1.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libmnl",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.0.5",
+        "rel": "2.oe2403"
+      },
+      "sha256": "6640268e0726e3852a5ea5aa4c3cba0f1f7dff66b5bf9aa2636a5d64aff165e6",
+      "location": "riscv64/libmnl-1.0.5-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libmnl",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.0.5",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libmnl(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.0.5",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libmnl.so.0()(64bit)"
+        },
+        {
+          "name": "libmnl.so.0(LIBMNL_1.0)(64bit)"
+        },
+        {
+          "name": "libmnl.so.0(LIBMNL_1.1)(64bit)"
+        },
+        {
+          "name": "libmnl.so.0(LIBMNL_1.2)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libmnl-1.0.5-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libmnl-1.0.5-2.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libmnl-1.0.5-2.oe2403.riscv64.rpm",
+      "file": "libmnl-1.0.5-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libnet",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.3",
+        "rel": "1.oe2403"
+      },
+      "sha256": "22506b65e345ba72ec9a27f88102c4a51bb2e935ac251321479c5f5a982bbe94",
+      "location": "riscv64/libnet-1.3-1.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libnet",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.3",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libnet(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.3",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libnet.so.9()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libnet-1.3-1.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libnet-1.3-1.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libnet-1.3-1.oe2403.riscv64.rpm",
+      "file": "libnet-1.3-1.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libnetfilter_conntrack",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.0.9",
+        "rel": "4.oe2403"
+      },
+      "sha256": "3a2ea1293348e30e61a3ce215fb01ce33c03c4dbfce26598fb37cb098216d5e4",
+      "location": "riscv64/libnetfilter_conntrack-1.0.9-4.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libnetfilter_conntrack",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.0.9",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libnetfilter_conntrack(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.0.9",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libnetfilter_conntrack.so.3()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libmnl.so.0()(64bit)"
+        },
+        {
+          "name": "libmnl.so.0(LIBMNL_1.0)(64bit)"
+        },
+        {
+          "name": "libmnl.so.0(LIBMNL_1.1)(64bit)"
+        },
+        {
+          "name": "libnfnetlink.so.0()(64bit)"
+        },
+        {
+          "name": "libnfnetlink.so.0(NFNETLINK_1.0.1)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libnetfilter_conntrack-1.0.9-4.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libnetfilter_conntrack-1.0.9-4.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libnetfilter_conntrack-1.0.9-4.oe2403.riscv64.rpm",
+      "file": "libnetfilter_conntrack-1.0.9-4.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libnfnetlink",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.0.2",
+        "rel": "2.oe2403"
+      },
+      "sha256": "c106e43c15b44d8e32b6e4f2cc441e1a08074645315edcd53e704915e487daaa",
+      "location": "riscv64/libnfnetlink-1.0.2-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libnfnetlink",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.0.2",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libnfnetlink(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.0.2",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libnfnetlink.so.0()(64bit)"
+        },
+        {
+          "name": "libnfnetlink.so.0(NFNETLINK_1.0.1)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libnfnetlink-1.0.2-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libnfnetlink-1.0.2-2.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libnfnetlink-1.0.2-2.oe2403.riscv64.rpm",
+      "file": "libnfnetlink-1.0.2-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libnftnl",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.2.6",
+        "rel": "2.oe2403"
+      },
+      "sha256": "264a0a0ba27ddf46eb7431b072fe79252ea30171f3b35ed9acf89dea23f13d1c",
+      "location": "riscv64/libnftnl-1.2.6-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libnftables",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.2.6",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libnftnl",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.2.6",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libnftnl(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.2.6",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libnftnl.so.11()(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_11)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_12)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_13)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_14)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_15)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_16)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_17)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libmnl.so.0()(64bit)"
+        },
+        {
+          "name": "libmnl.so.0(LIBMNL_1.0)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libnftnl-1.2.6-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libnftnl-1.2.6-2.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libnftnl-1.2.6-2.oe2403.riscv64.rpm",
+      "file": "libnftnl-1.2.6-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libnl3",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "3.7.0",
+        "rel": "4.oe2403"
+      },
+      "sha256": "57df85843a227a518346ae49fcd0c41fc73205bdab27155593bd39c10d63fc06",
+      "location": "riscv64/libnl3-3.7.0-4.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "config(libnl3)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.7.0",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libnl-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3_2_26)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3_2_27)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3_2_28)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3_2_29)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3_5)(64bit)"
+        },
+        {
+          "name": "libnl-3.so.200(libnl_3_6)(64bit)"
+        },
+        {
+          "name": "libnl-cli-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-cli-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-cli-3.so.200(libnl_3_2_28)(64bit)"
+        },
+        {
+          "name": "libnl-genl-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-genl-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-idiag-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-idiag-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-nf-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-nf-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-nf-3.so.200(libnl_3_6)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_2_26)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_2_27)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_2_28)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_2_29)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_4)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_5)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_6)(64bit)"
+        },
+        {
+          "name": "libnl-route-3.so.200(libnl_3_7)(64bit)"
+        },
+        {
+          "name": "libnl-xfrm-3.so.200()(64bit)"
+        },
+        {
+          "name": "libnl-xfrm-3.so.200(libnl_3)(64bit)"
+        },
+        {
+          "name": "libnl-xfrm-3.so.200(libnl_3_6)(64bit)"
+        },
+        {
+          "name": "libnl3",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.7.0",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libnl3(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.7.0",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "libnl3-cli"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libnl3-3.7.0-4.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libnl3-3.7.0-4.oe2403.riscv64",
+        "/etc/libnl",
+        "/etc/libnl/classid",
+        "/etc/libnl/pktloc",
+        "/usr/bin/genl-ctrl-list",
+        "/usr/bin/idiag-socket-details",
+        "/usr/bin/nf-ct-add",
+        "/usr/bin/nf-ct-events",
+        "/usr/bin/nf-ct-list",
+        "/usr/bin/nf-exp-add",
+        "/usr/bin/nf-exp-delete",
+        "/usr/bin/nf-exp-list",
+        "/usr/bin/nf-log",
+        "/usr/bin/nf-monitor",
+        "/usr/bin/nf-queue",
+        "/usr/bin/nl-addr-add",
+        "/usr/bin/nl-addr-delete",
+        "/usr/bin/nl-addr-list",
+        "/usr/bin/nl-class-add",
+        "/usr/bin/nl-class-delete",
+        "/usr/bin/nl-class-list",
+        "/usr/bin/nl-classid-lookup",
+        "/usr/bin/nl-cls-add",
+        "/usr/bin/nl-cls-delete",
+        "/usr/bin/nl-cls-list",
+        "/usr/bin/nl-fib-lookup",
+        "/usr/bin/nl-link-enslave",
+        "/usr/bin/nl-link-ifindex2name",
+        "/usr/bin/nl-link-list",
+        "/usr/bin/nl-link-name2ifindex",
+        "/usr/bin/nl-link-release",
+        "/usr/bin/nl-link-set",
+        "/usr/bin/nl-link-stats",
+        "/usr/bin/nl-list-caches",
+        "/usr/bin/nl-list-sockets",
+        "/usr/bin/nl-monitor",
+        "/usr/bin/nl-neigh-add",
+        "/usr/bin/nl-neigh-delete",
+        "/usr/bin/nl-neigh-list",
+        "/usr/bin/nl-neightbl-list",
+        "/usr/bin/nl-pktloc-lookup",
+        "/usr/bin/nl-qdisc-add",
+        "/usr/bin/nl-qdisc-delete",
+        "/usr/bin/nl-qdisc-list",
+        "/usr/bin/nl-route-add",
+        "/usr/bin/nl-route-delete",
+        "/usr/bin/nl-route-get",
+        "/usr/bin/nl-route-list",
+        "/usr/bin/nl-rule-list",
+        "/usr/bin/nl-tctree-list",
+        "/usr/bin/nl-util-addr"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libnl3-3.7.0-4.oe2403.riscv64.rpm",
+      "file": "libnl3-3.7.0-4.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libpcap",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "14",
+        "ver": "1.10.4",
+        "rel": "2.oe2403"
+      },
+      "sha256": "d9e64f333e89b39cd653332fb1a2d269a8748dc9cc85212a36357117a07309a9",
+      "location": "riscv64/libpcap-1.10.4-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libpcap",
+          "flags": "EQ",
+          "epoch": "14",
+          "ver": "1.10.4",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libpcap(riscv-64)",
+          "flags": "EQ",
+          "epoch": "14",
+          "ver": "1.10.4",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libpcap.so.1()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libpcap-1.10.4-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libpcap-1.10.4-2.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libpcap-1.10.4-2.oe2403.riscv64.rpm",
+      "file": "libpcap-1.10.4-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libpng",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "2",
+        "ver": "1.6.40",
+        "rel": "1.oe2403"
+      },
+      "sha256": "4f95ba31618ca41298ebdebac2f7dfa949fa8a5ba308cdd5dd8c3ba3c4db975f",
+      "location": "riscv64/libpng-1.6.40-1.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libpng",
+          "flags": "EQ",
+          "epoch": "2",
+          "ver": "1.6.40",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libpng(riscv-64)",
+          "flags": "EQ",
+          "epoch": "2",
+          "ver": "1.6.40",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libpng16.so.16()(64bit)"
+        },
+        {
+          "name": "libpng16.so.16(PNG16_0)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libm.so.6(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libz.so.1()(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.3.4)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.9)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libpng-1.6.40-1.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libpng-1.6.40-1.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libpng-1.6.40-1.oe2403.riscv64.rpm",
+      "file": "libpng-1.6.40-1.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libselinux",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "3.5",
+        "rel": "3.oe2403"
+      },
+      "sha256": "bed13ac05f5cae2af34b2f46353ade51a1f7ebf920abd7dd71284ea73a6376b9",
+      "location": "riscv64/libselinux-3.5-3.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libselinux",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.5",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libselinux(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.5",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libselinux-utils",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.5",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libselinux.so.1()(64bit)"
+        },
+        {
+          "name": "libselinux.so.1(LIBSELINUX_1.0)(64bit)"
+        },
+        {
+          "name": "libselinux.so.1(LIBSELINUX_3.4)(64bit)"
+        },
+        {
+          "name": "libselinux.so.1(LIBSELINUX_3.5)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libpcre2-8.so.0()(64bit)"
+        },
+        {
+          "name": "libsepol",
+          "flags": "GE",
+          "epoch": "0",
+          "ver": "3.5"
+        },
+        {
+          "name": "libsepol.so.2()(64bit)"
+        },
+        {
+          "name": "libsepol.so.2(LIBSEPOL_1.0)(64bit)"
+        },
+        {
+          "name": "pcre2"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libselinux-3.5-3.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libselinux-3.5-3.oe2403.riscv64",
+        "/usr/sbin/avcstat",
+        "/usr/sbin/getenforce",
+        "/usr/sbin/getpidprevcon",
+        "/usr/sbin/getsebool",
+        "/usr/sbin/matchpathcon",
+        "/usr/sbin/sefcontext_compile",
+        "/usr/sbin/selabel_digest",
+        "/usr/sbin/selabel_get_digests_all_partial_matches",
+        "/usr/sbin/selabel_lookup",
+        "/usr/sbin/selabel_lookup_best_match",
+        "/usr/sbin/selabel_partial_match",
+        "/usr/sbin/selinux_check_access",
+        "/usr/sbin/selinuxconlist",
+        "/usr/sbin/selinuxdefcon",
+        "/usr/sbin/selinuxenabled",
+        "/usr/sbin/selinuxexeccon",
+        "/usr/sbin/setenforce",
+        "/usr/sbin/validatetrans"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libselinux-3.5-3.oe2403.riscv64.rpm",
+      "file": "libselinux-3.5-3.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libsepol",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "3.5",
+        "rel": "3.oe2403"
+      },
+      "sha256": "d12e24a7d480cd310f0c11b2d85c4cf4cf2d3e4b891940c7db89fd7d38d1a06c",
+      "location": "riscv64/libsepol-3.5-3.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libsepol",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.5",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libsepol(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.5",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "libsepol.so.2()(64bit)"
+        },
+        {
+          "name": "libsepol.so.2(LIBSEPOL_1.0)(64bit)"
+        },
+        {
+          "name": "libsepol.so.2(LIBSEPOL_1.1)(64bit)"
+        },
+        {
+          "name": "libsepol.so.2(LIBSEPOL_3.0)(64bit)"
+        },
+        {
+          "name": "libsepol.so.2(LIBSEPOL_3.4)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/bin/sh",
+          "pre": "1"
+        },
+        {
+          "name": "/bin/sh"
+        },
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libsepol-3.5-3.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libsepol-3.5-3.oe2403.riscv64",
+        "/usr/bin/sepol_check_access",
+        "/usr/bin/sepol_compute_av",
+        "/usr/bin/sepol_compute_member",
+        "/usr/bin/sepol_compute_relabel",
+        "/usr/bin/sepol_validate_transition"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libsepol-3.5-3.oe2403.riscv64.rpm",
+      "file": "libsepol-3.5-3.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libstdc++",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "12.3.1",
+        "rel": "31.oe2403"
+      },
+      "sha256": "cb302b851e0c7914b0c4522a402da6756e3868190c005529a92abfe390072530",
+      "location": "riscv64/libstdc++-12.3.1-31.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libstdc++",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "12.3.1",
+          "rel": "31.oe2403"
+        },
+        {
+          "name": "libstdc++(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "12.3.1",
+          "rel": "31.oe2403"
+        },
+        {
+          "name": "libstdc++.so.6()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.1)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.10)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.11)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.12)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.13)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.2)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.5)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.6)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.7)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.8)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.9)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_TM_1)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.1)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.10)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.11)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.12)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.13)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.14)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.15)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.16)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.17)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.18)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.19)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.2)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.20)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.21)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.22)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.23)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.24)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.25)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.26)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.27)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.28)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.29)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.30)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.5)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.6)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.7)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.8)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.9)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "glibc",
+          "flags": "GE",
+          "epoch": "0",
+          "ver": "2.10.90",
+          "rel": "7"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.3)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.2.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_4.5.0)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libm.so.6(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libstdc++-12.3.1-31.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libstdc++-12.3.1-31.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libstdc++-12.3.1-31.oe2403.riscv64.rpm",
+      "file": "libstdc++-12.3.1-31.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libtasn1",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "4.19.0",
+        "rel": "1.oe2403"
+      },
+      "sha256": "92689ddd35cc1ffa418f93d322a5089fb96db7c61a6c48118b1a79b60ef8e4a3",
+      "location": "riscv64/libtasn1-4.19.0-1.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "bundled(gnulib)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "20130324"
+        },
+        {
+          "name": "libtasn1",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "4.19.0",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libtasn1(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "4.19.0",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libtasn1-tools",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "4.19.0",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "libtasn1.so.6()(64bit)"
+        },
+        {
+          "name": "libtasn1.so.6(LIBTASN1_0_3)(64bit)"
+        },
+        {
+          "name": "libtasn1.so.6(LIBTASN1_4_16_0)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libtasn1-4.19.0-1.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libtasn1-4.19.0-1.oe2403.riscv64",
+        "/usr/bin/asn1Coding",
+        "/usr/bin/asn1Decoding",
+        "/usr/bin/asn1Parser"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libtasn1-4.19.0-1.oe2403.riscv64.rpm",
+      "file": "libtasn1-4.19.0-1.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libunistring",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.1",
+        "rel": "2.oe2403"
+      },
+      "sha256": "3f6eee9416365ea9bbc0ec14ea583f80c01d723b6773955cafd4554671732073",
+      "location": "riscv64/libunistring-1.1-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "bundled(gnulib)"
+        },
+        {
+          "name": "libunistring",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.1",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libunistring(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.1",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libunistring.so.5()(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.34)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libunistring-1.1-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libunistring-1.1-2.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libunistring-1.1-2.oe2403.riscv64.rpm",
+      "file": "libunistring-1.1-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "libuuid",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "2.39.1",
+        "rel": "16.oe2403"
+      },
+      "sha256": "485f160677dce4dbf9a7377411b97714df3f67abc83ec3bc917f42114e2558c4",
+      "location": "riscv64/libuuid-2.39.1-16.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libuuid",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.39.1",
+          "rel": "16.oe2403"
+        },
+        {
+          "name": "libuuid(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.39.1",
+          "rel": "16.oe2403"
+        },
+        {
+          "name": "libuuid.so.1()(64bit)"
+        },
+        {
+          "name": "libuuid.so.1(UUIDD_PRIVATE)(64bit)"
+        },
+        {
+          "name": "libuuid.so.1(UUID_1.0)(64bit)"
+        },
+        {
+          "name": "libuuid.so.1(UUID_2.20)(64bit)"
+        },
+        {
+          "name": "libuuid.so.1(UUID_2.31)(64bit)"
+        },
+        {
+          "name": "libuuid.so.1(UUID_2.36)(64bit)"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-libuuid-2.39.1-16.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-libuuid-2.39.1-16.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/libuuid-2.39.1-16.oe2403.riscv64.rpm",
+      "file": "libuuid-2.39.1-16.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "ncurses-base",
+      "arch": "noarch",
+      "version": {
+        "epoch": "0",
+        "ver": "6.4",
+        "rel": "8.oe2403"
+      },
+      "sha256": "59c3946916612b6f59b19dbac079fee76750c2665deb2047dbba6953796bee54",
+      "location": "noarch/ncurses-base-6.4-8.oe2403.noarch.rpm",
+      "provides": [
+        {
+          "name": "ncurses-base",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "6.4",
+          "rel": "8.oe2403"
+        }
+      ],
+      "requires": [],
+      "files": [
+        "/etc/terminfo"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/noarch/ncurses-base-6.4-8.oe2403.noarch.rpm",
+      "file": "ncurses-base-6.4-8.oe2403.noarch.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "ncurses-libs",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "6.4",
+        "rel": "8.oe2403"
+      },
+      "sha256": "e609e9f066a3df8222372f20b27c089b5213d656038719bff7eeeff1c3e6ca43",
+      "location": "riscv64/ncurses-libs-6.4-8.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libform.so.6()(64bit)"
+        },
+        {
+          "name": "libformw.so.6()(64bit)"
+        },
+        {
+          "name": "libmenu.so.6()(64bit)"
+        },
+        {
+          "name": "libmenuw.so.6()(64bit)"
+        },
+        {
+          "name": "libncurses.so.6()(64bit)"
+        },
+        {
+          "name": "libncursesw.so.6()(64bit)"
+        },
+        {
+          "name": "libpanel.so.6()(64bit)"
+        },
+        {
+          "name": "libpanelw.so.6()(64bit)"
+        },
+        {
+          "name": "libtic.so.6()(64bit)"
+        },
+        {
+          "name": "libtinfo.so.6()(64bit)"
+        },
+        {
+          "name": "ncurses-libs",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "6.4",
+          "rel": "8.oe2403"
+        },
+        {
+          "name": "ncurses-libs(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "6.4",
+          "rel": "8.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "ncurses-base",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "6.4",
+          "rel": "8.oe2403"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.34)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-ncurses-libs-6.4-8.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-ncurses-libs-6.4-8.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/ncurses-libs-6.4-8.oe2403.riscv64.rpm",
+      "file": "ncurses-libs-6.4-8.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "nettle",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "3.8.1",
+        "rel": "1.oe2403"
+      },
+      "sha256": "3a66f71e3f58df11b9a0348fa99d0e685ca5ce1dc7e9b70b7509efc9046aed32",
+      "location": "riscv64/nettle-3.8.1-1.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libhogweed.so.6()(64bit)"
+        },
+        {
+          "name": "libhogweed.so.6(HOGWEED_6)(64bit)"
+        },
+        {
+          "name": "libhogweed.so.6(HOGWEED_INTERNAL_6_6)(64bit)"
+        },
+        {
+          "name": "libnettle.so.8()(64bit)"
+        },
+        {
+          "name": "libnettle.so.8(NETTLE_8)(64bit)"
+        },
+        {
+          "name": "libnettle.so.8(NETTLE_INTERNAL_8_6)(64bit)"
+        },
+        {
+          "name": "nettle",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.8.1",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "nettle(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "3.8.1",
+          "rel": "1.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libgmp.so.10()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-nettle-3.8.1-1.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-nettle-3.8.1-1.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/nettle-3.8.1-1.oe2403.riscv64.rpm",
+      "file": "nettle-3.8.1-1.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "newt",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "0.52.23",
+        "rel": "3.oe2403"
+      },
+      "sha256": "93bc2fca3e8cec36844c455911fbeaca5b8401c51dce76997fb874fc85bbba51",
+      "location": "riscv64/newt-0.52.23-3.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libnewt.so.0.52()(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52)(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52.11)(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52.13)(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52.16)(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52.17)(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52.6)(64bit)"
+        },
+        {
+          "name": "libnewt.so.0.52(NEWT_0.52.9)(64bit)"
+        },
+        {
+          "name": "newt",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.52.23",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "newt(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.52.23",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "snack",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.52.23",
+          "rel": "3.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libpopt.so.0()(64bit)"
+        },
+        {
+          "name": "libpopt.so.0(LIBPOPT_0)(64bit)"
+        },
+        {
+          "name": "libslang.so.2()(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-newt-0.52.23-3.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-newt-0.52.23-3.oe2403.riscv64",
+        "/usr/bin/whiptail"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/newt-0.52.23-3.oe2403.riscv64.rpm",
+      "file": "newt-0.52.23-3.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "nftables",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "1",
+        "ver": "1.0.8",
+        "rel": "6.oe2403"
+      },
+      "sha256": "3341b42a5fe924e1ecfc5f14ed049a6b66c6c8d4680cbce2aca0df64ab448f61",
+      "location": "riscv64/nftables-1.0.8-6.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "config(nftables)",
+          "flags": "EQ",
+          "epoch": "1",
+          "ver": "1.0.8",
+          "rel": "6.oe2403"
+        },
+        {
+          "name": "libnftables.so.1()(64bit)"
+        },
+        {
+          "name": "libnftables.so.1(LIBNFTABLES_1)(64bit)"
+        },
+        {
+          "name": "libnftables.so.1(LIBNFTABLES_2)(64bit)"
+        },
+        {
+          "name": "libnftables.so.1(LIBNFTABLES_3)(64bit)"
+        },
+        {
+          "name": "nftables",
+          "flags": "EQ",
+          "epoch": "1",
+          "ver": "1.0.8",
+          "rel": "6.oe2403"
+        },
+        {
+          "name": "nftables(riscv-64)",
+          "flags": "EQ",
+          "epoch": "1",
+          "ver": "1.0.8",
+          "rel": "6.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/bin/sh",
+          "pre": "1"
+        },
+        {
+          "name": "/bin/sh"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libedit.so.0()(64bit)"
+        },
+        {
+          "name": "libgmp.so.10()(64bit)"
+        },
+        {
+          "name": "libjansson.so.4()(64bit)"
+        },
+        {
+          "name": "libjansson.so.4(libjansson.so.4)(64bit)"
+        },
+        {
+          "name": "libmnl.so.0()(64bit)"
+        },
+        {
+          "name": "libmnl.so.0(LIBMNL_1.0)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11()(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_11)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_13)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_14)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_15)(64bit)"
+        },
+        {
+          "name": "libnftnl.so.11(LIBNFTNL_16)(64bit)"
+        },
+        {
+          "name": "libxtables.so.12()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-nftables-1.0.8-6.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-nftables-1.0.8-6.oe2403.riscv64",
+        "/etc/ld.so.conf.d/nftables-riscv64.conf",
+        "/etc/nftables",
+        "/etc/nftables/all-in-one.nft",
+        "/etc/nftables/arp-filter.nft",
+        "/etc/nftables/bridge-filter.nft",
+        "/etc/nftables/inet-filter.nft",
+        "/etc/nftables/inet-nat.nft",
+        "/etc/nftables/ipv4-filter.nft",
+        "/etc/nftables/ipv4-mangle.nft",
+        "/etc/nftables/ipv4-nat.nft",
+        "/etc/nftables/ipv4-raw.nft",
+        "/etc/nftables/ipv6-filter.nft",
+        "/etc/nftables/ipv6-mangle.nft",
+        "/etc/nftables/ipv6-nat.nft",
+        "/etc/nftables/ipv6-raw.nft",
+        "/etc/nftables/netdev-ingress.nft",
+        "/etc/nftables/osf",
+        "/etc/nftables/osf/pf.os",
+        "/etc/sysconfig/nftables.conf",
+        "/usr/sbin/nft"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/nftables-1.0.8-6.oe2403.riscv64.rpm",
+      "file": "nftables-1.0.8-6.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "p11-kit",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "0.25.0",
+        "rel": "2.oe2403"
+      },
+      "sha256": "d2feb095cfbb84bb79a19af9b6e1b2dd8825845e70df434c5a041024978ee4d9",
+      "location": "riscv64/p11-kit-0.25.0-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libp11-kit.so.0()(64bit)"
+        },
+        {
+          "name": "libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)"
+        },
+        {
+          "name": "p11-kit",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.25.0",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "p11-kit(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.25.0",
+          "rel": "2.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libffi.so.8()(64bit)"
+        },
+        {
+          "name": "libffi.so.8(LIBFFI_BASE_8.0)(64bit)"
+        },
+        {
+          "name": "libffi.so.8(LIBFFI_CLOSURE_8.0)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-p11-kit-0.25.0-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-p11-kit-0.25.0-2.oe2403.riscv64",
+        "/etc/pkcs11",
+        "/etc/pkcs11/modules",
+        "/usr/bin/p11-kit"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/p11-kit-0.25.0-2.oe2403.riscv64.rpm",
+      "file": "p11-kit-0.25.0-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "p11-kit-trust",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "0.25.0",
+        "rel": "2.oe2403"
+      },
+      "sha256": "c85264c6ddccd74a1f0f611bedd819ace3d4ac8926627dde238578d7402bc20e",
+      "location": "riscv64/p11-kit-trust-0.25.0-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "p11-kit-trust",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.25.0",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "p11-kit-trust(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.25.0",
+          "rel": "2.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/bin/sh",
+          "pre": "1"
+        },
+        {
+          "name": "/bin/sh"
+        },
+        {
+          "name": "/usr/sbin/update-alternatives",
+          "pre": "1"
+        },
+        {
+          "name": "/usr/sbin/update-alternatives"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libffi.so.8()(64bit)"
+        },
+        {
+          "name": "libp11-kit.so.0()(64bit)"
+        },
+        {
+          "name": "libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)"
+        },
+        {
+          "name": "libtasn1.so.6()(64bit)"
+        },
+        {
+          "name": "libtasn1.so.6(LIBTASN1_0_3)(64bit)"
+        },
+        {
+          "name": "p11-kit",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "0.25.0",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-p11-kit-trust-0.25.0-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-p11-kit-trust-0.25.0-2.oe2403.riscv64",
+        "/usr/bin/trust"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/p11-kit-trust-0.25.0-2.oe2403.riscv64.rpm",
+      "file": "p11-kit-trust-0.25.0-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "pcre2",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "10.42",
+        "rel": "7.oe2403"
+      },
+      "sha256": "6fd21e713ce9cfc540103c2b260fc693245958a317a2485597fcfd0ed586bb83",
+      "location": "riscv64/pcre2-10.42-7.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "bundled(sljit)"
+        },
+        {
+          "name": "libpcre2-16.so.0()(64bit)"
+        },
+        {
+          "name": "libpcre2-32.so.0()(64bit)"
+        },
+        {
+          "name": "libpcre2-8.so.0()(64bit)"
+        },
+        {
+          "name": "libpcre2-posix.so.3()(64bit)"
+        },
+        {
+          "name": "pcre2",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "10.42",
+          "rel": "7.oe2403"
+        },
+        {
+          "name": "pcre2(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "10.42",
+          "rel": "7.oe2403"
+        },
+        {
+          "name": "pcre2-tools"
+        },
+        {
+          "name": "pcre2-utf16"
+        },
+        {
+          "name": "pcre2-utf32"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libreadline.so.8()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-pcre2-10.42-7.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-pcre2-10.42-7.oe2403.riscv64",
+        "/usr/bin/pcre2grep",
+        "/usr/bin/pcre2test"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/pcre2-10.42-7.oe2403.riscv64.rpm",
+      "file": "pcre2-10.42-7.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "popt",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.19",
+        "rel": "2.oe2403"
+      },
+      "sha256": "498d26970f706e27aecfdc2bb10c9b6f6c49e08094e579e3ec11e8e1860f80c7",
+      "location": "riscv64/popt-1.19-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libpopt.so.0()(64bit)"
+        },
+        {
+          "name": "libpopt.so.0(LIBPOPT_0)(64bit)"
+        },
+        {
+          "name": "popt",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.19",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "popt(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.19",
+          "rel": "2.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/bin/sh",
+          "pre": "1"
+        },
+        {
+          "name": "/bin/sh"
+        },
+        {
+          "name": "/sbin/ldconfig",
+          "pre": "1"
+        },
+        {
+          "name": "/sbin/ldconfig"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-popt-1.19-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-popt-1.19-2.oe2403.riscv64",
+        "/etc/popt.d"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/popt-1.19-2.oe2403.riscv64.rpm",
+      "file": "popt-1.19-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "protobuf",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "25.1",
+        "rel": "3.oe2403"
+      },
+      "sha256": "ee6ab845df72476574929032026ad3327360db9101274d06bc1742d10defc814",
+      "location": "riscv64/protobuf-25.1-3.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libprotobuf.so.25.1.0()(64bit)"
+        },
+        {
+          "name": "protobuf",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "25.1",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "protobuf(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "25.1",
+          "rel": "3.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libabsl_cord.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_info.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_die_if_null.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_marshalling.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_hash.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_check_op.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_conditions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_message.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_nullguard.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_hash_set.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_logging_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_spinlock_wait.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_status.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_statusor.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_str_format_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strings.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_synchronization.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_throw_delegate.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time_zone.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.8)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.9)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.14)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.20)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.21)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.29)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.9)(64bit)"
+        },
+        {
+          "name": "libz.so.1()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-protobuf-25.1-3.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-protobuf-25.1-3.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/protobuf-25.1-3.oe2403.riscv64.rpm",
+      "file": "protobuf-25.1-3.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "protobuf-c",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.4.1",
+        "rel": "1.oe2403"
+      },
+      "sha256": "e14c6ed8b11b76093e1972acc83a18bea725f60b1225a1ed7c6966e29466fd25",
+      "location": "riscv64/protobuf-c-1.4.1-1.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libprotobuf-c.so.1()(64bit)"
+        },
+        {
+          "name": "libprotobuf-c.so.1(LIBPROTOBUF_C_1.0.0)(64bit)"
+        },
+        {
+          "name": "libprotobuf-c.so.1(LIBPROTOBUF_C_1.3.0)(64bit)"
+        },
+        {
+          "name": "protobuf-c",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.4.1",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "protobuf-c(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.4.1",
+          "rel": "1.oe2403"
+        },
+        {
+          "name": "protobuf-c-compiler",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.4.1",
+          "rel": "1.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libabsl_bad_optional_access.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_bad_variant_access.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_base.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_city.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_civil_time.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cord.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cord_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_functions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_handle.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_info.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc32c.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_cord_state.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_cpu_detect.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_debugging_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_demangle_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_die_if_null.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_examine_stack.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_exponential_biased.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_commandlineflag.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_commandlineflag_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_config.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_marshalling.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_private_handle_accessor.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_program_name.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_reflection.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_graphcycles_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_hash.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_hashtablez_sampler.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_int128.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_kernel_timeout_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_leak_check.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_entry.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_globals.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_initialize.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_check_op.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_conditions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_format.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_globals.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_log_sink_set.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_message.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_nullguard.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_proto.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_severity.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_sink.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_low_level_hash.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_malloc_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_hash_set.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_logging_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_spinlock_wait.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_stacktrace.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_status.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_statusor.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_str_format_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strerror.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_string_view.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strings.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strings_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_symbolize.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_synchronization.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_throw_delegate.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time_zone.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libprotobuf.so.25.1.0()(64bit)"
+        },
+        {
+          "name": "libprotoc.so.25.1.0()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.8)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.9)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.20)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.21)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.30)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.9)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.34)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-protobuf-c-1.4.1-1.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-protobuf-c-1.4.1-1.oe2403.riscv64",
+        "/usr/bin/protoc-c",
+        "/usr/bin/protoc-gen-c"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/protobuf-c-1.4.1-1.oe2403.riscv64.rpm",
+      "file": "protobuf-c-1.4.1-1.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "protobuf-compiler",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "25.1",
+        "rel": "3.oe2403"
+      },
+      "sha256": "b05af389e77fdea41529ad93d2e3593499b8b9ca546fe32d64e6e64029f615c1",
+      "location": "riscv64/protobuf-compiler-25.1-3.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libprotoc.so.25.1.0()(64bit)"
+        },
+        {
+          "name": "protobuf-compiler",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "25.1",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "protobuf-compiler(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "25.1",
+          "rel": "3.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "emacs-filesystem",
+          "flags": "GE",
+          "epoch": "0",
+          "ver": "29.1"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libabsl_bad_optional_access.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_bad_variant_access.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_base.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_city.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_civil_time.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cord.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cord_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_functions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_handle.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_cordz_info.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc32c.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_cord_state.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_cpu_detect.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_crc_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_debugging_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_demangle_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_die_if_null.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_examine_stack.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_exponential_biased.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_commandlineflag.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_commandlineflag_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_config.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_marshalling.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_private_handle_accessor.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_program_name.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_flags_reflection.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_graphcycles_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_hash.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_hashtablez_sampler.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_int128.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_kernel_timeout_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_leak_check.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_entry.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_globals.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_initialize.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_check_op.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_conditions.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_format.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_globals.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_log_sink_set.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_message.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_nullguard.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_internal_proto.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_severity.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_log_sink.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_low_level_hash.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_malloc_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_hash_set.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_raw_logging_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_spinlock_wait.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_stacktrace.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_status.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_statusor.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_str_format_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strerror.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_string_view.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strings.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_strings_internal.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_symbolize.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_synchronization.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_throw_delegate.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libabsl_time_zone.so.2308.0.0()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1()(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.0)(64bit)"
+        },
+        {
+          "name": "libgcc_s.so.1(GCC_3.4)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libprotobuf.so.25.1.0()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6()(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.8)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(CXXABI_1.3.9)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.11)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.14)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.20)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.21)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.29)(64bit)"
+        },
+        {
+          "name": "libstdc++.so.6(GLIBCXX_3.4.9)(64bit)"
+        },
+        {
+          "name": "protobuf",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "25.1",
+          "rel": "3.oe2403"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-protobuf-compiler-25.1-3.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-protobuf-compiler-25.1-3.oe2403.riscv64",
+        "/usr/bin/protoc",
+        "/usr/bin/protoc-25.1.0"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/protobuf-compiler-25.1-3.oe2403.riscv64.rpm",
+      "file": "protobuf-compiler-25.1-3.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "readline",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "8.2",
+        "rel": "2.oe2403"
+      },
+      "sha256": "13be9bc627504610990bda23e2eb257a2a41a3071bdb6dc650cba4ab45d8a980",
+      "location": "riscv64/readline-8.2-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libhistory.so.8()(64bit)"
+        },
+        {
+          "name": "libreadline.so.8()(64bit)"
+        },
+        {
+          "name": "readline",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "8.2",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "readline(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "8.2",
+          "rel": "2.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libtinfo.so.6()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.38)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-readline-8.2-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-readline-8.2-2.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/readline-8.2-2.oe2403.riscv64.rpm",
+      "file": "readline-8.2-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "slang",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "2.3.3",
+        "rel": "2.oe2403"
+      },
+      "sha256": "30ca11eef1c456b06f268b131c9c4997f30c24b7bd7f06c0de1f65aacaf0cd6c",
+      "location": "riscv64/slang-2.3.3-2.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "config(slang)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.3.3",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "libslang.so.2()(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2)(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2.1.0)(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2.1.1)(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2.2.0)(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2.2.1)(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2.2.3)(64bit)"
+        },
+        {
+          "name": "libslang.so.2(SLANG2.3.0)(64bit)"
+        },
+        {
+          "name": "slang",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.3.3",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "slang(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.3.3",
+          "rel": "2.oe2403"
+        },
+        {
+          "name": "slang-slsh",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "2.3.3",
+          "rel": "2.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "/usr/bin/env"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libm.so.6()(64bit)"
+        },
+        {
+          "name": "libm.so.6(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "libpng16.so.16()(64bit)"
+        },
+        {
+          "name": "libpng16.so.16(PNG16_0)(64bit)"
+        },
+        {
+          "name": "libz.so.1()(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.34)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-slang-2.3.3-2.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-slang-2.3.3-2.oe2403.riscv64",
+        "/etc/slsh.rc",
+        "/usr/bin/slsh"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/slang-2.3.3-2.oe2403.riscv64.rpm",
+      "file": "slang-2.3.3-2.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    },
+    {
+      "name": "zlib",
+      "arch": "riscv64",
+      "version": {
+        "epoch": "0",
+        "ver": "1.2.13",
+        "rel": "4.oe2403"
+      },
+      "sha256": "32bd23b8d38465fe6c2a6ecb343974c2fadcedf3749d99a1a64ffc5a200bd46a",
+      "location": "riscv64/zlib-1.2.13-4.oe2403.riscv64.rpm",
+      "provides": [
+        {
+          "name": "libz.so.1()(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.0)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.0.2)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.0.8)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.12)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.2)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.2.3)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.2.4)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.3.3)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.3.4)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.3.5)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.5.1)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.5.2)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.7.1)(64bit)"
+        },
+        {
+          "name": "libz.so.1(ZLIB_1.2.9)(64bit)"
+        },
+        {
+          "name": "zlib",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.2.13",
+          "rel": "4.oe2403"
+        },
+        {
+          "name": "zlib(riscv-64)",
+          "flags": "EQ",
+          "epoch": "0",
+          "ver": "1.2.13",
+          "rel": "4.oe2403"
+        }
+      ],
+      "requires": [
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1()(64bit)"
+        },
+        {
+          "name": "ld-linux-riscv64-lp64d.so.1(GLIBC_2.27)(64bit)"
+        },
+        {
+          "name": "rtld(GNU_HASH)"
+        },
+        {
+          "name": "libc.so.6(GLIBC_2.27)(64bit)"
+        }
+      ],
+      "files": [
+        "/etc/ima/digest_lists.tlv/0-metadata_list-compact_tlv-zlib-1.2.13-4.oe2403.riscv64",
+        "/etc/ima/digest_lists/0-metadata_list-compact-zlib-1.2.13-4.oe2403.riscv64"
+      ],
+      "url": "https://fast-mirror.isrc.ac.cn/openeuler-sig-riscv/openEuler-RISC-V/obs/24.03/mainline/riscv64/zlib-1.2.13-4.oe2403.riscv64.rpm",
+      "file": "zlib-1.2.13-4.oe2403.riscv64.rpm",
+      "repositoryVersion": "24.03"
+    }
+  ]
+}

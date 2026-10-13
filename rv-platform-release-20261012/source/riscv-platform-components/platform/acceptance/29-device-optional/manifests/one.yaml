@@ -1,0 +1,29 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "one"
+  namespace: "@@NS@@"
+  labels: {}
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "python3"
+        - "-c"
+        - "import os,stat,time; p=\"@@DEVICE_CONTAINER_PATH@@\"; s=os.stat(p); assert stat.S_ISCHR(s.st_mode) or stat.S_ISBLK(s.st_mode); time.sleep(86400)"
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+          @@DEVICE_RESOURCE@@: "1"
+        limits:
+          cpu: "1"
+          memory: "64Mi"
+          @@DEVICE_RESOURCE@@: "1"

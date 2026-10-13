@@ -1,0 +1,27 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "anchor"
+  namespace: "@@NS@@"
+  labels:
+    app: "anchor"
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "sleep"
+        - "86400"
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "1"
+          memory: "128Mi"

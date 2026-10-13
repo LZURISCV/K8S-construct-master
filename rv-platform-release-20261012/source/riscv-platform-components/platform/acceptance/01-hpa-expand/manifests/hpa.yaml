@@ -1,0 +1,23 @@
+apiVersion: "autoscaling/v2"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "load"
+  namespace: "@@NS@@"
+spec:
+  scaleTargetRef:
+    apiVersion: "apps/v1"
+    kind: "Deployment"
+    name: "load"
+  minReplicas: 1
+  maxReplicas: 3
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 15
+  metrics:
+    -
+      type: "Resource"
+      resource:
+        name: "memory"
+        target:
+          type: "Utilization"
+          averageUtilization: 80

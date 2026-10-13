@@ -1,0 +1,13 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "ResourcePolicy"
+metadata:
+  name: "feedback"
+  namespace: "@@NS@@"
+spec:
+  query: "vector(0.9)"
+  minReplicas: 1
+  maxReplicas: 3
+  cooldownSeconds: 0
+  deployment: "scene-app"
+  target: 0.3
+  downscaleStabilizationSeconds: 0

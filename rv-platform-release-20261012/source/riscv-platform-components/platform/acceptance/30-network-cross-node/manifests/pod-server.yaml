@@ -1,0 +1,28 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "pod-server"
+  namespace: "@@NS@@"
+  labels: {}
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: "@@TARGET_HOSTNAME@@"
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "iperf3"
+        - "-s"
+        - "-p"
+        - "@@CROSS_NET_PORT@@"
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "1"
+          memory: "128Mi"

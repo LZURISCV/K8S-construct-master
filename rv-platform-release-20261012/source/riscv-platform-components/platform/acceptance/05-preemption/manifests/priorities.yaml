@@ -1,0 +1,15 @@
+apiVersion: "scheduling.k8s.io/v1"
+kind: "PriorityClass"
+metadata:
+  name: "@@NS@@-low"
+value: -1000
+globalDefault: false
+preemptionPolicy: "PreemptLowerPriority"
+---
+apiVersion: "scheduling.k8s.io/v1"
+kind: "PriorityClass"
+metadata:
+  name: "@@NS@@-high"
+value: -900
+globalDefault: false
+preemptionPolicy: "PreemptLowerPriority"

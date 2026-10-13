@@ -1,0 +1,26 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "tainted"
+  namespace: "@@NS@@"
+  labels: {}
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "sleep"
+        - "86400"
+      resources:
+        requests:
+          cpu: "10m"
+          memory: "16Mi"
+        limits:
+          cpu: "1"
+          memory: "128Mi"

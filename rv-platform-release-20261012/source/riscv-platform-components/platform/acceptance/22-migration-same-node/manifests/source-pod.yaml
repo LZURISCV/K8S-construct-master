@@ -1,0 +1,29 @@
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  name: "memory-counter"
+  namespace: "@@NS@@"
+  labels: {}
+  annotations:
+    migration.riscv.io/enabled: "true"
+spec:
+  restartPolicy: "Never"
+  automountServiceAccountToken: false
+  containers:
+    -
+      name: "workload"
+      image: "@@TEST_IMAGE@@"
+      imagePullPolicy: "Never"
+      command:
+        - "python3"
+        - "-u"
+        - "-c"
+        - "#!/usr/bin/env python3\n\"\"\"Both values exist only in RAM; a fresh process cannot reproduce them.\"\"\"\nimport json\nimport time\nimport uuid\n\nboot_id = str(uuid.uuid4())\ncounter = 0\nwhile True:\n    counter += 1\n    print(json.dumps({\"boot_id\": boot_id, \"counter\": counter, \"time_ns\": time.time_ns()}), flush=True)\n    time.sleep(1)\n"
+      resources:
+        requests:
+          cpu: "100m"
+          memory: "64Mi"
+        limits:
+          cpu: "1"
+          memory: "128Mi"
+  nodeName: "@@TEST_NODE@@"

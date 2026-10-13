@@ -1,0 +1,306 @@
+[
+  {
+    "directory": "01-hpa-expand",
+    "title": "原生 HPA 扩容",
+    "outline": "3-2-0001",
+    "notes": "需要 metrics-server；验证 Kubernetes 原生功能。",
+    "manifests": [
+      "deployment.yaml",
+      "hpa.yaml"
+    ]
+  },
+  {
+    "directory": "02-hpa-shrink",
+    "title": "原生 HPA 收缩",
+    "outline": "3-2-0002",
+    "notes": "需要 metrics-server；验证 Kubernetes 原生功能。",
+    "manifests": [
+      "deployment.yaml",
+      "hpa.yaml"
+    ]
+  },
+  {
+    "directory": "03-pod-affinity",
+    "title": "Pod 亲和性",
+    "outline": "3-2-0003",
+    "notes": "大纲目的写 Pod 亲和性，步骤写节点亲和性；本项和 12 项分别覆盖。",
+    "manifests": [
+      "anchor.yaml",
+      "follower.yaml"
+    ]
+  },
+  {
+    "directory": "04-node-exclusion",
+    "title": "节点标签不匹配",
+    "outline": "3-2-0004",
+    "notes": "按大纲实际节点标签排除步骤测试；真正 Pod 反亲和性另见 13 项。",
+    "manifests": [
+      "pod.yaml"
+    ]
+  },
+  {
+    "directory": "05-preemption",
+    "title": "优先级抢占",
+    "outline": "3-2-0005",
+    "notes": "共享的现有单工作节点会跳过；不能以跳过记录作为通过。",
+    "manifests": [
+      "priorities.yaml",
+      "low.yaml",
+      "high.yaml"
+    ]
+  },
+  {
+    "directory": "06-taint-reject",
+    "title": "污点无容忍",
+    "outline": "3-2-0006",
+    "notes": "短暂给指定节点增加本次专用 NoSchedule 污点，结束时只移除此键。",
+    "manifests": [
+      "pod.yaml"
+    ]
+  },
+  {
+    "directory": "07-taint-tolerate",
+    "title": "污点有容忍",
+    "outline": "3-2-0007",
+    "notes": "短暂给指定节点增加本次专用 NoSchedule 污点，结束时只移除此键。",
+    "manifests": [
+      "pod.yaml"
+    ]
+  },
+  {
+    "directory": "08-bcast",
+    "title": "广播",
+    "outline": "3-2-0008",
+    "notes": "默认一个 Worker Pod 两个 rank；只有多个物理节点参与才能验证跨节点分层收益。融合计时实测，不预设加速结果。",
+    "manifests": [
+      "native.yaml",
+      "hierarchical.yaml"
+    ]
+  },
+  {
+    "directory": "09-reduce",
+    "title": "规约",
+    "outline": "3-2-0009",
+    "notes": "默认一个 Worker Pod 两个 rank；只有多个物理节点参与才能验证跨节点分层收益。融合计时实测，不预设加速结果。",
+    "manifests": [
+      "native.yaml",
+      "hierarchical.yaml"
+    ]
+  },
+  {
+    "directory": "10-allgather",
+    "title": "全收集",
+    "outline": "3-2-0010",
+    "notes": "默认一个 Worker Pod 两个 rank；只有多个物理节点参与才能验证跨节点分层收益。融合计时实测，不预设加速结果。",
+    "manifests": [
+      "native.yaml",
+      "hierarchical.yaml"
+    ]
+  },
+  {
+    "directory": "11-fusion",
+    "title": "计算通信融合",
+    "outline": "3-2-0011",
+    "notes": "默认一个 Worker Pod 两个 rank；只有多个物理节点参与才能验证跨节点分层收益。融合计时实测，不预设加速结果。",
+    "manifests": [
+      "serial.yaml",
+      "overlap.yaml",
+      "serial-limited.yaml",
+      "overlap-limited.yaml"
+    ]
+  },
+  {
+    "directory": "12-node-affinity",
+    "title": "节点亲和性",
+    "outline": "3-2-0012",
+    "notes": "",
+    "manifests": [
+      "pod.yaml"
+    ]
+  },
+  {
+    "directory": "13-pod-antiaffinity",
+    "title": "Pod 反亲和性",
+    "outline": "补充调度验证",
+    "notes": "",
+    "manifests": [
+      "anchor.yaml",
+      "anti.yaml"
+    ]
+  },
+  {
+    "directory": "14-resource-pool",
+    "title": "自研资源池声明和资源更新",
+    "outline": "指标 2",
+    "notes": "这里是声明式更新后滚动替换，不是运行进程原地扩缩或内存迁移。",
+    "manifests": [
+      "claim.yaml",
+      "claim-resized.yaml"
+    ]
+  },
+  {
+    "directory": "15-node-profile",
+    "title": "自研节点配置动态更新",
+    "outline": "指标 2 和 4",
+    "notes": "删除 NodeProfile 不会自动撤回节点配置；脚本显式清理本次专用标签。",
+    "manifests": [
+      "profile.yaml",
+      "profile-updated.yaml"
+    ]
+  },
+  {
+    "directory": "16-resource-policy",
+    "title": "自研 ResourcePolicy 弹性闭环",
+    "outline": "指标 2 和 4",
+    "notes": "Prometheus vector 注入只验证控制逻辑；实际 CPU 采集另测，不据此宣称场景性能。",
+    "manifests": [
+      "deployment.yaml",
+      "high.yaml",
+      "low.yaml"
+    ]
+  },
+  {
+    "directory": "17-scenario-scale",
+    "title": "自研 ScenarioPolicy 弹性闭环",
+    "outline": "指标 2 和 4",
+    "notes": "Prometheus vector 注入只验证控制逻辑；实际 CPU 采集另测，不据此宣称场景性能。",
+    "manifests": [
+      "deployment.yaml",
+      "high.yaml",
+      "low.yaml"
+    ]
+  },
+  {
+    "directory": "18-scenario-node",
+    "title": "自研场景驱动节点配置",
+    "outline": "指标 4",
+    "notes": "使用本次专用标签，不改业务池、污点或节点可调度状态。",
+    "manifests": [
+      "profile.yaml",
+      "policy.yaml"
+    ]
+  },
+  {
+    "directory": "19-monitoring",
+    "title": "自研 HAL 和 Prometheus 真实指标",
+    "outline": "指标 4",
+    "notes": "读取现有已安装监控，无需创建测试工作负载，因而没有测试 YAML；安装 YAML 为 Helm 模板。",
+    "manifests": []
+  },
+  {
+    "directory": "20-network-single",
+    "title": "自研主机网络与普通 Pod 顺序对比",
+    "outline": "指标 3",
+    "notes": "单控制端命令会自动启动并关闭本机 iperf3 服务。需放通工作端至控制端 25212/TCP。没有预设性能提升门槛。",
+    "manifests": [
+      "baseline.yaml",
+      "host-client.yaml"
+    ]
+  },
+  {
+    "directory": "21-hostport-accounting",
+    "title": "自研主机端口冲突拒绝和释放",
+    "outline": "指标 3",
+    "notes": "这里检查自研端口资源生命周期，比单独测试 hostNetwork 开关多了冲突保护与释放验证。",
+    "manifests": [
+      "server.yaml",
+      "peer.yaml"
+    ]
+  },
+  {
+    "directory": "22-migration-same-node",
+    "title": "自研同节点恢复",
+    "outline": "指标 2",
+    "notes": "新 UID 证明新 Pod；内存 boot_id 不变且计数继续增长证明进程状态恢复。失败保留命名空间和事务，不删除 finalizer。采样间隔不等于暂停时间。",
+    "manifests": [
+      "source-pod.yaml",
+      "migration.yaml"
+    ]
+  },
+  {
+    "directory": "23-migration-cross-node",
+    "title": "自研跨节点迁移",
+    "outline": "指标 2",
+    "notes": "新 UID 证明新 Pod；内存 boot_id 不变且计数继续增长证明进程状态恢复。失败保留命名空间和事务，不删除 finalizer。采样间隔不等于暂停时间。",
+    "manifests": [
+      "source-pod.yaml",
+      "migration.yaml"
+    ]
+  },
+  {
+    "directory": "24-real-scale",
+    "title": "真实容器部署规模",
+    "outline": "指标 4",
+    "notes": "默认 10 个真实 Pod 的冒烟测试。单节点 110 Pod 上限不能据此声称超大规模验证完成。",
+    "manifests": [
+      "deployment.yaml"
+    ]
+  },
+  {
+    "directory": "25-isolation",
+    "title": "cgroup v1 容器实际隔离",
+    "outline": "指标 2",
+    "notes": "本版针对用户已确认的 cgroup v1；迁移到 v2 环境应改用 v2 指标检查。",
+    "manifests": [
+      "pod.yaml"
+    ]
+  },
+  {
+    "directory": "26-compute-deadline",
+    "title": "容器计算任务时限实测",
+    "outline": "指标 4",
+    "notes": "记录 p50 p99 最大值和超时数。一般 Linux 无法凭一次测试形成硬实时保证。",
+    "manifests": [
+      "source.yaml",
+      "job.yaml"
+    ]
+  },
+  {
+    "directory": "27-handover-health",
+    "title": "交付文件和自研 CRD 安装检查",
+    "outline": "3-2-0013 的方案交付部分",
+    "notes": "开源社区贡献比例不在本次功能验收范围；不能把安装检查算作社区贡献完成。",
+    "manifests": []
+  },
+  {
+    "directory": "28-tcp-latency",
+    "title": "真实 TCP 数据完整性和时延",
+    "outline": "指标 3 和 4",
+    "notes": "需要控制端能访问工作端测试端口 25213/TCP；默认 10 ms 是本次可配置测试门槛，不代表已满足未给定的项目时限指标。",
+    "manifests": [
+      "server.yaml"
+    ]
+  },
+  {
+    "directory": "29-device-optional",
+    "title": "可选真实设备资源分配和释放",
+    "outline": "异构硬件扩展",
+    "notes": "该组件是通用真实字符或块设备插件，不是 SR-IOV NIC 插件；没有真实设备时跳过，禁止用假设备冒充。",
+    "manifests": [
+      "one.yaml",
+      "all.yaml"
+    ]
+  },
+  {
+    "directory": "30-network-cross-node",
+    "title": "两工作节点网络顺序对比",
+    "outline": "指标 3 和 4",
+    "notes": "需要两台实际工作节点。五轮交替顺序，保存所有原始数据；吞吐相近也是有效测量结果。",
+    "manifests": [
+      "pod-client.yaml",
+      "host-client.yaml",
+      "pod-server.yaml",
+      "host-server.yaml"
+    ]
+  },
+  {
+    "directory": "31-scenario-migration",
+    "title": "自研场景驱动跨节点有状态迁移",
+    "outline": "指标 2 和 4",
+    "notes": "需要两个已安装迁移代理的工作节点；Prometheus vector 注入触发，随后实测目标 Pod 内存状态连续。",
+    "manifests": [
+      "source-pod.yaml",
+      "scenario.yaml"
+    ]
+  }
+]

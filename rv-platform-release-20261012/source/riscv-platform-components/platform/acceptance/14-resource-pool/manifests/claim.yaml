@@ -1,0 +1,20 @@
+apiVersion: "platform.riscv.io/v1alpha1"
+kind: "ResourceClaim"
+metadata:
+  name: "pool"
+  namespace: "@@NS@@"
+spec:
+  backend: "kubernetes"
+  image: "@@TEST_IMAGE@@"
+  command:
+    - "sleep"
+    - "86400"
+  replicas: 1
+  nodeSelector:
+    kubernetes.io/hostname: "@@NODE_HOSTNAME@@"
+  requests:
+    cpu: "50m"
+    memory: "32Mi"
+  limits:
+    cpu: "100m"
+    memory: "64Mi"
