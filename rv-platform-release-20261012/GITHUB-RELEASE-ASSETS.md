@@ -1,23 +1,20 @@
-# GitHub Release asset
+# Git LFS asset
 
-The following file is intentionally not stored as a normal Git object because
-it is larger than GitHub's 100 MiB per-file limit:
+The following file is stored in this repository with Git LFS because it is
+larger than GitHub's 100 MiB normal Git object limit:
 
 `offline/communication/rv-communication-0.2.0.tar.gz`
 
-Download it from the `rv-platform-release-20261012` release of this repository
-and place it at the path above before running the full checksum verification.
+A normal clone or pull with Git LFS installed downloads the file into the path
+above. If the checkout contains only an LFS pointer, run `git lfs pull`.
 
 Expected SHA-256:
 
 `b2e6b7892877f73db574d97cfeae6e705f3a4da2c8685e8f68e48b20aaeac78d`
 
-Example on Linux:
+Verification on Linux:
 
 ```bash
-base="https://github.com/LZURISCV/K8S-construct-master/releases/download/rv-platform-release-20261012"
-mkdir -p offline/communication
-curl -fL -o offline/communication/rv-communication-0.2.0.tar.gz \
-  "$base/rv-communication-0.2.0.tar.gz"
+git lfs pull
 sha256sum -c SHA256SUMS
 ```
